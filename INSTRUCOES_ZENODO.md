@@ -38,3 +38,4 @@ Assim que o DOI for emitido (exemplo: `10.5281/zenodo.14889921`), adicione a seg
 ```markdown
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 ```
+

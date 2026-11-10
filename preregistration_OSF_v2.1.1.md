@@ -75,3 +75,4 @@ Before unblinding the empirical Planck data, the pipeline achieved:
 - Execution script: `python scripts/run_planck.py --seed 507719`
 - Outputs: `results_planck.json`
 - Verification repository: https://github.com/bruno-olivaes/dsi-cosmo-search
+

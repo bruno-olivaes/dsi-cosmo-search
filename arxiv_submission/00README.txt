@@ -16,3 +16,4 @@ pdflatex main.tex
 Notes:
 - No external non-standard packages required.
 - Self-contained LaTeX source file.
+

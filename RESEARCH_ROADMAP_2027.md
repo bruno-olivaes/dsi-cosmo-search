@@ -59,3 +59,4 @@ timeline
 
 ### 7. 2028: Vera C. Rubin Observatory (LSST)
 - Utilização dos dados fotométricos de 10 anos do Legacy Survey of Space and Time (LSST) para investigar modulações oscilatórias em aglomerados de galáxias e lentes gravitacionais fracas (cosmic shear).
+
