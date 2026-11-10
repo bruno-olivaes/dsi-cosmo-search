@@ -1,0 +1,26 @@
+arXiv Submission Metadata
+=========================
+
+Title:
+Constraints on Primordial Discrete Scale Invariance from the Planck 2018 Temperature Power Spectrum
+
+Authors:
+Bruno L. Olivaes
+
+Abstract:
+We present a pre-registered, radix-agnostic search for discrete scale invariance (DSI) in the Planck 2018 cosmic microwave background temperature power spectrum. DSI predicts a characteristic log-periodic modulation of primordial perturbations governed by the preferred scaling factor lambda, inducing oscillations in Fourier space with angular log-frequency omega = 2*pi/ln(lambda). Using a certified three-stage protocol (detection via generalized Lomb-Scargle periodogram, non-linear refinement, and multiplicity-corrected certification) subject to five mandatory integrity gates, we find no evidence for DSI in the Planck 2018 data. The most prominent candidate (lambda_hat = 4.12 +/- 0.31) yields an empirical post-trial significance of p_corrected = 0.975 via a non-parametric bootstrap-of-maximum null distribution, with an amplitude fully consistent with Gaussian cosmological sample variance. We establish rigorous 95% confidence level upper limits on the modulation amplitude epsilon < 0.05 across the comprehensive scaling range lambda in [1.1, 148]. Furthermore, we replicate our protocol on synthetic Large-Scale Structure mocks matching the Dark Energy Spectroscopic Instrument (DESI) survey precision, confirming identical null-detection behavior.
+
+Primary Category:
+astro-ph.CO (Cosmology and Nongalactic Astrophysics)
+
+Cross-list Categories:
+gr-qc, stat.AP
+
+Comments:
+4 pages, 1 table. Code and data provenance available at https://github.com/bruno-olivaes/dsi-cosmo-search
+
+Journal-ref:
+(Leave blank during initial arXiv submission)
+
+DOI:
+(Pending Zenodo webhook sync; update once enabled in Zenodo dashboard)
