@@ -1,0 +1,30 @@
+{
+  "seed": 507719,
+  "result": {
+    "stage1": {
+      "omega_peak": 4.076610732270935,
+      "power_peak": 0.18441592979302884
+    },
+    "stage2": {
+      "amp": 2853.9764428865547,
+      "omega": 4.075898507462058,
+      "phi": 0.30434725871054724,
+      "sigma_omega": 0.2369521539770366,
+      "lambda_hat": 4.67180761044937,
+      "sigma_lambda": 0.4186766654774448,
+      "rel_err_lambda": 0.08961770269413412
+    },
+    "stage3": {
+      "gate_resolvable": true,
+      "gate_amplitude": false,
+      "gate_precision": true,
+      "gate_plevel": false,
+      "power_observed": 0.18441600355086593,
+      "p_corrected": 0.314,
+      "delta_bic": NaN,
+      "gate_bic": false,
+      "certified": false
+    },
+    "certified": false
+  }
+}
