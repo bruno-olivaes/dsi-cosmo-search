@@ -48,3 +48,24 @@ Perfil oficial do autor:
 ## 📚 4. Mapeamento da Classificação Decimal de Dewey (CDD)
 
 Consulte o mapa completo em [`CDD_PORTFOLIO_MAP.md`](CDD_PORTFOLIO_MAP.md) para detalhes de categorização temática de cada projeto.
+
+---
+
+## 🚀 5. Próximos Passos: Divulgação e Submissão (Cronograma de Journals)
+
+Com todos os pré-registros, códigos e DOIs Zenodo emitidos, o portfólio está blindado contra apropriação indevida e pronto para submissão aos periódicos internacionais revisados por pares.
+
+Consulte o kit completo de cartas em [`JOURNAL_SUBMISSION_KIT.md`](JOURNAL_SUBMISSION_KIT.md), os posts de redes sociais em [`SOCIAL_MEDIA_OUTREACH.md`](SOCIAL_MEDIA_OUTREACH.md) e os modelos de contato em [`EMAIL_TEMPLATES.md`](EMAIL_TEMPLATES.md).
+
+### 🗓️ Tabela de Prazos e Submissão Sugerida
+
+| Janela / Fase | Artigo Alvo | Revista / Periódico Internacional | Foco Editorial da Carta | Status |
+| :--- | :--- | :--- | :--- | :---: |
+| **Semana 1** | **Paper 1 (Planck DSI)** | *Monthly Notices of the Royal Astronomical Society (MNRAS)* | Pré-registro OSF, limites superiores rigorosos ($\varepsilon < 0.05$) e bootstrap sem *look-elsewhere effect*. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
+| **Semana 1** | **Paper 2 (Casimir AFM)** | *Review of Scientific Instruments (RSI)* | Eliminação de artefatos de Runge e splines em metrologia de forças sub-mícron em AFM/KPFM. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
+| **Semana 2** | **Paper 4 (Qiskit ZNE)** | *Quantum Science and Technology (QST)* | Benchmark empírico em hardware IBM: onde o ZNE harmônico falha e superioridade de Pauli Twirling em 4 qubits. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
+| **Semana 2** | **Paper 7 (NSBI LHC)** | *Physical Review D (PRD)* | Ganho de $9,5\times$ em sensibilidade com NSBI não-binada e eliminação de falsos positivos com $\Delta\text{BIC} = -23.2$. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
+| **Semana 3** | **Paper 3 (Euclid DE)** | *Astronomy & Astrophysics (A&A)* ou *JCAP* | Solução de Friedmann analítica e matriz de Fisher de quebra de degenerescência no ESA Euclid. | Planejado |
+| **Semana 3** | **Paper 5 (PQC Wire)** | *IEEE Transactions on Network and Service Management* ou *ACM CCS* | Benchmark de wire cost, fragmentação TCP e impacto do NIST FIPS 203 (ML-KEM-768) no TLS 1.3. | Planejado |
+| **Semana 4** | **Paper 6 (LHC DSI)** | *European Physical Journal C (EPJC)* | Certificação de 3 estágios em 62k colisões dimuon do CMS (CERN Open Data) e ausência de paridade cósmica. | Planejado |
+

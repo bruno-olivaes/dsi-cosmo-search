@@ -40,3 +40,4 @@ A metáfora das classes decimais aninhadas da CDD ilustra a estrutura de escala 
  └── 005.8 (Segurança de Redes & Criptografia - Paper 5)
  └── 006.3 (Inteligência Artificial & Aprendizado de Máquina - Papers 4, 5, 6, 7)
 ```
+
