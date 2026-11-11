@@ -32,6 +32,8 @@ O Academia.edu funciona como a grande **vitrine social da ciência**: nele pesqu
 
 - **Caminho do PDF no seu computador:**  
   `C:\Users\bruno\projects\dsi-cosmo-search\manuscript\main.pdf`
+- **DOI Oficial Zenodo (CERN/DataCite):**  
+  `10.5281/zenodo.24121677`  ([https://doi.org/10.5281/zenodo.24121677](https://doi.org/10.5281/zenodo.24121677))
 - **Título:**  
   `Constraints on Primordial Discrete Scale Invariance from the Planck 2018 Temperature Power Spectrum`
 - **Autor:**  
@@ -49,6 +51,8 @@ We present a pre-registered, radix-agnostic search for discrete scale invariance
 
 - **Caminho do PDF no seu computador:**  
   `C:\Users\bruno\casimir-afm-spectroscopy\manuscript\main.pdf`
+- **DOI Oficial Zenodo (CERN/DataCite):**  
+  `10.5281/zenodo.24121687`  ([https://doi.org/10.5281/zenodo.24121687](https://doi.org/10.5281/zenodo.24121687))
 - **Título:**  
   `Statistical Pitfalls in Casimir Force Spectroscopy: How to Avoid False Positive Signals`
 - **Autor:**  
@@ -66,6 +70,8 @@ Precision nanomechanical measurements of the Casimir interaction at sub-micron s
 
 - **Caminho do PDF no seu computador:**  
   `C:\Users\bruno\projects\oscillatory-dark-energy-euclid\manuscript\main.pdf`
+- **DOI Oficial Zenodo (CERN/DataCite):**  
+  `10.5281/zenodo.24121691`  ([https://doi.org/10.5281/zenodo.24121691](https://doi.org/10.5281/zenodo.24121691))
 - **Título:**  
   `Forecasting Log-Oscillatory Dark Energy with ESA Euclid: Breaking the Degeneracy`
 - **Autor:**  
@@ -83,6 +89,8 @@ Recent cosmological observations from the Dark Energy Spectroscopic Instrument (
 
 - **Caminho do PDF no seu computador:**  
   `C:\Users\bruno\projects\qiskit-lombscargle-zne\manuscript\main.pdf`
+- **DOI Oficial Zenodo (CERN/DataCite):**  
+  `10.5281/zenodo.24121693`  ([https://doi.org/10.5281/zenodo.24121693](https://doi.org/10.5281/zenodo.24121693))
 - **Título:**  
   `When Harmonic ZNE Fails: A Comparative Benchmark of Error Mitigation on NISQ Devices`
 - **Autor:**  
@@ -100,6 +108,8 @@ Zero-Noise Extrapolation (ZNE) is a cornerstone of quantum error mitigation on N
 
 - **Caminho do PDF no seu computador:**  
   `C:\Users\bruno\projects\pqc-crypto-agility-benchmark\manuscript\main.pdf`
+- **DOI Oficial Zenodo (CERN/DataCite):**  
+  `10.5281/zenodo.24121695`  ([https://doi.org/10.5281/zenodo.24121695](https://doi.org/10.5281/zenodo.24121695))
 - **Título:**  
   `The Network Cost of Post-Quantum Cryptography: TCP Fragmentation in TLS 1.3 Handshakes`
 - **Autor:**  
