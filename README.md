@@ -1,6 +1,7 @@
 # dsi-cosmo-search: Pre-Registered Search for Discrete Scale Invariance in Cosmological Spectra
 
-[![Release](https://img.shields.io/github/v/release/bruno-olivaes/dsi-cosmo-search?color=blue)](https://github.com/bruno-olivaes/dsi-cosmo-search/releases/tag/v2.1.1)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24121677.svg)](https://doi.org/10.5281/zenodo.24121677)
+[![Release](https://img.shields.io/github/v/release/bruno-olivaes/dsi-cosmo-search?color=blue)](https://github.com/bruno-olivaes/dsi-cosmo-search/releases/tag/v2.1.2)
 [![Paper PDF](https://img.shields.io/badge/Paper-PDF_Manuscript-red.svg)](manuscript/main.pdf)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.12](https://img.shields.io/badge/Python-3.12+-green.svg)](https://www.python.org/)
