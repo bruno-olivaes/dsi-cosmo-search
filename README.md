@@ -129,6 +129,23 @@ dsi-cosmo-search/
 
 ---
 
+## 📚 Portfolio Classification (CDD / Dewey Decimal Classification)
+
+This repository is part of a 7-paper multidisciplinary research program exploring discrete scale invariance, quantum error mitigation, and post-quantum security. For indexing and cross-disciplinary navigation, all papers and the unified master monograph are classified according to the Dewey Decimal Classification (CDD / DDC) system (see complete mapping in [`CDD_PORTFOLIO_MAP.md`](CDD_PORTFOLIO_MAP.md)):
+
+| Paper / Project | CDD Classes | Domain | Scope |
+| :--- | :---: | :--- | :--- |
+| **Paper 1: Primordial DSI (Planck 2018)** (`dsi-cosmo-search`) | **523.1** / **530.1** | Cosmology / Theoretical Physics | Certified DSI search in Planck 2018 PR3 CMB TT spectrum. |
+| **Paper 2: Casimir Force Spectroscopy** (`casimir-afm-spectroscopy`) | **530.4** / **620.5** | Condensed Matter / Nanotechnology | Runge phenomenon & spline artifact elimination in sub-micron AFM/KPFM. |
+| **Paper 3: Log-Oscillatory Dark Energy** (`oscillatory-dark-energy-euclid`) | **523.1** | Cosmology / Dark Energy | Analytical Friedmann solution and Euclid ESA degeneracy-breaking forecast. |
+| **Paper 4: Quantum Error Mitigation** (`qiskit-lombscargle-zne`) | **006.3** / **530.1** | AI & Quantum Computing / Quantum Physics | Lomb-Scargle Zero-Noise Extrapolation (ZNE) on transmon qubits. |
+| **Paper 5: Post-Quantum TLS 1.3 Wire Cost** (`pqc-crypto-agility-benchmark`) | **005.8** / **006.3** | Network Security / Computer Science | Wire overhead & TCP fragmentation benchmarks for NIST FIPS 203 (ML-KEM). |
+| **Paper 6: Certified DSI in LHC Spectra** (`lhc-dsi-search`) | **539.7** / **006.3** | Particle Physics / Data Science | 3-stage certified DSI search in CMS Open Data dimuon invariant mass spectra. |
+| **Paper 7: Neural SBI for LHC Searches** (`lhc-nsbi-dsi`) | **006.3** / **539.7** | AI & Machine Learning / High Energy Physics | Unbinned Neural Simulation-Based Inference providing $9.5\times$ sensitivity gain. |
+| **Unified Master Monograph** (`The Matrioska Protocol`) | **500** $\to$ **530.1** | Natural Sciences / Physical Theories | 34-page synthesis ([DOI: 10.5281/zenodo.24124702](https://doi.org/10.5281/zenodo.24124702)). |
+
+---
+
 ## 📜 Citation & License
 
 If you use this protocol or code in your research, please cite:
