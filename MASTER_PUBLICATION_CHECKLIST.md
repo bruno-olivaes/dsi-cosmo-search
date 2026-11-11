@@ -9,11 +9,11 @@ Focado na estratégia ágil e independente: **DOIs Oficiais do CERN via Zenodo**
 
 | # | Artigo | Repositório GitHub | Arquivo PDF Compilado | DOI Zenodo (CERN) | Vitrine Academia.edu |
 | :-: | :--- | :--- | :--- | :---: | :---: |
-| **1** | **Planck DSI** | [`bruno-olivaes/dsi-cosmo-search`](https://github.com/bruno-olivaes/dsi-cosmo-search) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/dsi-cosmo-search/manuscript/main.pdf) | [10.5281/zenodo.24121677](https://doi.org/10.5281/zenodo.24121677) | Pronto p/ Upload |
-| **2** | **Casimir AFM** | [`bruno-olivaes/casimir-afm-spectroscopy`](https://github.com/bruno-olivaes/casimir-afm-spectroscopy) | [`manuscript/main.pdf`](file:///C:/Users/bruno/casimir-afm-spectroscopy/manuscript/main.pdf) | [10.5281/zenodo.24121687](https://doi.org/10.5281/zenodo.24121687) | Pronto p/ Upload |
-| **3** | **Euclid DE** | [`bruno-olivaes/oscillatory-dark-energy-euclid`](https://github.com/bruno-olivaes/oscillatory-dark-energy-euclid) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/oscillatory-dark-energy-euclid/manuscript/main.pdf) | [10.5281/zenodo.24121691](https://doi.org/10.5281/zenodo.24121691) | Pronto p/ Upload |
-| **4** | **Qiskit ZNE** | [`bruno-olivaes/qiskit-lombscargle-zne`](https://github.com/bruno-olivaes/qiskit-lombscargle-zne) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/qiskit-lombscargle-zne/manuscript/main.pdf) | [10.5281/zenodo.24121693](https://doi.org/10.5281/zenodo.24121693) | Pronto p/ Upload |
-| **5** | **PQC Wire** | [`bruno-olivaes/pqc-crypto-agility-benchmark`](https://github.com/bruno-olivaes/pqc-crypto-agility-benchmark) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/pqc-crypto-agility-benchmark/manuscript/main.pdf) | [10.5281/zenodo.24121695](https://doi.org/10.5281/zenodo.24121695) | Pronto p/ Upload |
+| **1** | **Planck DSI** | [`bruno-olivaes/dsi-cosmo-search`](https://github.com/bruno-olivaes/dsi-cosmo-search) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/dsi-cosmo-search/manuscript/main.pdf) | [10.5281/zenodo.24121677](https://doi.org/10.5281/zenodo.24121677) | [Publicado](https://www.academia.edu/180665558) |
+| **2** | **Casimir AFM** | [`bruno-olivaes/casimir-afm-spectroscopy`](https://github.com/bruno-olivaes/casimir-afm-spectroscopy) | [`manuscript/main.pdf`](file:///C:/Users/bruno/casimir-afm-spectroscopy/manuscript/main.pdf) | [10.5281/zenodo.24121687](https://doi.org/10.5281/zenodo.24121687) | [Publicado](https://www.academia.edu/180668897) |
+| **3** | **Euclid DE** | [`bruno-olivaes/oscillatory-dark-energy-euclid`](https://github.com/bruno-olivaes/oscillatory-dark-energy-euclid) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/oscillatory-dark-energy-euclid/manuscript/main.pdf) | [10.5281/zenodo.24121691](https://doi.org/10.5281/zenodo.24121691) | [Publicado](https://www.academia.edu/180670266) |
+| **4** | **Qiskit ZNE** | [`bruno-olivaes/qiskit-lombscargle-zne`](https://github.com/bruno-olivaes/qiskit-lombscargle-zne) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/qiskit-lombscargle-zne/manuscript/main.pdf) | [10.5281/zenodo.24121693](https://doi.org/10.5281/zenodo.24121693) | [Publicado](https://www.academia.edu/180671536) |
+| **5** | **PQC Wire** | [`bruno-olivaes/pqc-crypto-agility-benchmark`](https://github.com/bruno-olivaes/pqc-crypto-agility-benchmark) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/pqc-crypto-agility-benchmark/manuscript/main.pdf) | [10.5281/zenodo.24121695](https://doi.org/10.5281/zenodo.24121695) | [Publicado](https://www.academia.edu/180672168) |
 
 ---
 
@@ -43,17 +43,17 @@ Todos os 5 repositórios foram processados com sucesso pelo CERN/Zenodo, com os 
 
 ---
 
-## 🌐 3. Vitrine Social Acadêmica: Publicação no Academia.edu
+## 🌐 3. Vitrine Social Acadêmica: Publicação no Academia.edu (100% Concluída!)
 
-Com os PDFs compilados e os DOIs em mãos, publique os 5 artigos no **[Academia.edu](https://www.academia.edu/)** para atrair leitores, cientistas e parceiros de pesquisa.
+Todos os 5 artigos estão publicados e disponíveis publicamente no perfil oficial do autor:
+👉 **[https://independent.academia.edu/BrunoOlivaes](https://independent.academia.edu/BrunoOlivaes)**
 
-Consulte o manual dedicado:
-👉 [`INSTRUCOES_ACADEMIA_EDU.md`](file:///C:/Users/bruno/projects/dsi-cosmo-search/INSTRUCOES_ACADEMIA_EDU.md)
-
-Para cada artigo, o guia fornece:
-- O arquivo PDF pronto para upload.
-- Título, autores e resumo em texto puro formatado para copiar e colar.
-- Tags e áreas de pesquisa recomendadas para maximizar o alcance algorítmico do site.
+Links diretos para cada publicação:
+1. **Planck DSI:** [`academia.edu/180665558`](https://www.academia.edu/180665558/Constraints_on_Primordial_Discrete_Scale_Invariance_from_the_Planck_2018_Temperature_Power_Spectrum)
+2. **Casimir AFM:** [`academia.edu/180668897`](https://www.academia.edu/180668897/Statistical_Pitfalls_in_Casimir_Force_Spectroscopy_How_to_Avoid_False_Positive_Signals)
+3. **Euclid DE:** [`academia.edu/180670266`](https://www.academia.edu/180670266/Forecasting_Log_Oscillatory_Dark_Energy_with_ESA_Euclid_Breaking_the_Degeneracy)
+4. **Qiskit ZNE:** [`academia.edu/180671536`](https://www.academia.edu/180671536/When_Harmonic_ZNE_Fails_A_Comparative_Benchmark_of_Error_Mitigation_on_NISQ_Devices)
+5. **PQC Wire:** [`academia.edu/180672168`](https://www.academia.edu/180672168/The_Network_Cost_of_Post_Quantum_Cryptography_TCP_Fragmentation_in_TLS_1_3_Handshakes)
 
 ---
 
