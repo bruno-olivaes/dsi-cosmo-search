@@ -66,7 +66,7 @@ Para evitar que flutuações de ruído sejam confundidas com física nova, nenhu
 * **Classificação CDD:** **523.1** (Cosmologia) + **530.1** (Física Teórica)
 * **Revista-Alvo:** *Monthly Notices of the Royal Astronomical Society (MNRAS)*
 * **Dados Primários:** Espectro de potência angular de temperatura binned da Planck 2018 PR3 (`COM_PowerSpect_CMB-TT-binned_R3.01.txt`), com hash criptográfico SHA-256 verificado (`ed2b8b51b...`).
-* **Metodologia:** Pré-registro OSF; varredura de Lomb-Scargle generalizado em coordenadas de multipolo logarítmico; ajuste não-linear com Cholesky; 1.000 realizações de bootstrap de fase; replicação em mock sintético de LSS do Dark Energy Spectroscopic Instrument (DESI DR2).
+* **Metodologia:** Protocolo pré-registrado e versionado via Git antes da abertura dos dados (v2.1.2); varredura de Lomb-Scargle generalizado em coordenadas de multipolo logarítmico; ajuste não-linear com Cholesky; 1.000 realizações de bootstrap de fase; replicação em mock sintético de LSS do Dark Energy Spectroscopic Instrument (DESI DR2).
 * **Resultados Auditados:**
   - O modo de maior potência ($\hat{\omega} = 4,437$, $\hat{\lambda} = 4,12 \pm 0,31$) falha no Portão 2 de amplitude e no Portão 4 de multiplicidade ($p_{\text{corrigido}} = 0,975$).
   - **Resultado nulo formal certificado:** ausência de DSI na CMB primordial.
@@ -107,12 +107,12 @@ Para evitar que flutuações de ruído sejam confundidas com física nova, nenhu
 ---
 
 ### ⚛️ PAPER 4: Computação Quântica & Mitigação de Ruído (ZNE)
-* **Título:** *When Harmonic ZNE Fails: A Comparative Benchmark of Error Mitigation on Superconducting NISQ Processors*
+* **Título:** *When Harmonic ZNE Fails: A Comparative Benchmark of Error Mitigation on Superconducting Transmon Models*
 * **Repositório GitHub:** `https://github.com/bruno-olivaes/qiskit-lombscargle-zne`
 * **DOI Zenodo:** `10.5281/zenodo.24121693` | **Academia.edu:** `academia.edu/180671536`
 * **Classificação CDD:** **006.3** (IA / Computação Quântica) + **530.1** (Física Quântica)
 * **Revista-Alvo:** *Quantum Science and Technology (QST)*
-* **Plataforma:** Qiskit 2.x, Qiskit Runtime Primitives (`EstimatorV2`), hardware IBM Quantum (processadores transmon) e modelos de ruído *heavy-hex*.
+* **Plataforma:** Qiskit 2.x, Qiskit Runtime Primitives (`EstimatorV2`), emulação de transmons via `AerSimulator` com modelos de ruído *heavy-hex* e pulse stretching fracionário.
 * **Metodologia:** Benchmarking empírico comparando Zero-Noise Extrapolation Harmônico (HZNE via desacoplamento espectral Lomb-Scargle) contra ZNE polinomial/exponencial e Compilação Aleatorizada (Pauli Twirling) em circuitos de 1 a 4 qubits.
 * **Resultados Auditados:**
   - Em 1 e 2 qubits dominados por diafonia de acionamento monocanal, o ZNE Harmônico supera a extrapolação polinomial padrão, reduzindo o erro de estimação de estado em até **34%**.
@@ -127,16 +127,16 @@ Para evitar que flutuações de ruído sejam confundidas com física nova, nenhu
 * **DOI Zenodo:** `10.5281/zenodo.24121695` | **Academia.edu:** `academia.edu/180672168`
 * **Classificação CDD:** **005.8** (Segurança de Redes) + **006.3** (Ciência da Computação)
 * **Revista-Alvo:** *IEEE Transactions on Network and Service Management* ou *ACM CCS*
-* **Metodologia:** Emulação em nível de pacote capturada via PCAP/Wireshark auditando a sobrecarga de bytes de camada de aplicação do padrão **NIST FIPS 203** (ML-KEM-768 / Kyber) e KEMs híbridos (`X25519Kyber768Draft00`) versus RSA-3072 e ECDH clássico.
+* **Metodologia:** Auditoria de transporte de socket e benchmark de bytes de camada de aplicação do padrão **NIST FIPS 203** (ML-KEM-768 / Kyber) e KEMs híbridos (`X25519Kyber768Draft00`) versus RSA-3072 e ECDH clássico, avaliando o comportamento frente ao MTU padrão de Ethernet (1.500 B).
 * **Resultados Auditados:**
   - Chaves públicas (1.184 B) e textos cifrados (1.088 B) do ML-KEM-768 estouram o MTU padrão de Ethernet (1.500 B), forçando fragmentação TCP em múltiplos pacotes no handshake inicial.
-  - Demonstração empírica de elevação da latência de conexão em redes móveis e com perda de pacotes ($>1\%$), propondo heurísticas de cripto-agilidade e pré-cacheamento para evitar o estouro de janelas de congestionamento TCP (`initcwnd`).
+  - Modelagem analítica do impacto em janelas de congestionamento TCP (`initcwnd = 10`), demonstrando sensibilidade aumentada a perdas e propondo heurísticas de cripto-agilidade e pré-cacheamento.
 
 ---
 
 ### 💥 PAPER 6: DSI em Espectros de Massa do LHC (CMS Open Data)
 * **Título:** *A Certified Search for Discrete Scale Invariance in LHC Dimuon Mass Spectra*
-* **Repositório GitHub:** `https://github.com/bruno-olivaes/lhc-dsi-search` (Release `v1.0.0`)
+* **Repositório GitHub:** `https://github.com/bruno-olivaes/lhc-dsi-search` (Release `v1.0.1`)
 * **Classificação CDD:** **539.7** (Física de Partículas / Altas Energias) + **006.3** (Ciência de Dados)
 * **Revista-Alvo:** *European Physical Journal C (EPJC)*
 * **Dados Primários:** $N = 62.214$ eventos físicos de pares dimuon com cargas opostas ($\mu^+\mu^-$) registrados pelo experimento CMS no CERN ($\sqrt{s} = 7\,\text{TeV}$, CERN Open Data Portal, DOI: 10.7483/OPENDATA.CMS.7001.303), cobrindo massas invariantes de $2,0$ a $109,9\,\text{GeV}$.
@@ -145,32 +145,32 @@ Para evitar que flutuações de ruído sejam confundidas com física nova, nenhu
   - Na janela limpa de Drell-Yan ($11 \le m \le 75\,\text{GeV}$, 17.458 pares sem mésons vetoriais conhecidos): pico principal em $\hat{\lambda} = 2,902 \pm 0,075$ falha no Portão 2 de amplitude ($A = 2,15 < 4,08$) e no Portão 4 de bootstrap ($p_{\text{corrigido}} = 0,324$). **Resultado nulo formal certificado.**
   - No espectro amplo ($2 \le m \le 110\,\text{GeV}$): ressonâncias físicas ($J/\psi, \Upsilon, Z$) injetam potência espectral aparente, mas falham no Portão 2 ($A = 7,83 < 17,45$). Não constituem uma escada geométrica log-periódica contínua.
   - **Incompatibilidade Cruzada:** O candidato do LHC ($\lambda \approx 2,90$) não possui coerência de escala com o candidato primordial do Planck ($\lambda \approx 4,12$), desmistificando qualquer "constante universal de escala geométrica".
-  - **Auditoria Módulo 9:** Exploração numérica das razões de massa dos mésons vetoriais ($m_\Upsilon / m_{J/\psi} \approx 3^1$, $m_Z / m_\Upsilon \approx 3^2$, $m_Z / m_{J/\psi} \approx 3^3$), registrada com rigor como curiosidade fenomenológica do Modelo Padrão, e não descoberta dinâmica de DSI.
+  - **Auditoria Módulo 9:** Exploração numérica das razões de massa dos mésons vetoriais ($m_\Upsilon / m_{J/\psi} \approx 3^1$, $m_Z / m_\Upsilon \approx 3^2$, $m_Z / m_{J/\psi} \approx 3^3$), registrada como observação fenomenológica exploratória (recomenda-se suprimir na submissão formal a periódicos para evitar conotação numerológica).
 
 ---
 
-### ⚡ PAPER 7: Inferência Neural Baseada em Simulação (NSBI no LHC)
-* **Título:** *Breaking the Zeptouniverse Sensitivity Barrier: Neural Simulation-Based Inference for Certified Discrete Scale Invariance Searches at the LHC*
-* **Repositório GitHub:** `https://github.com/bruno-olivaes/lhc-nsbi-dsi` (Release `v1.0.0`)
-* **Classificação CDD:** **006.3** (Inteligência Artificial / Aprendizado de Máquina) + **539.7** (Física de Partículas)
+### ⚡ PAPER 7: Razão de Verossimilhança Não-Binada no LHC
+* **Título:** *Breaking the Zeptouniverse Sensitivity Barrier: Unbinned Continuous Likelihood for Certified Discrete Scale Invariance Searches at the LHC*
+* **Repositório GitHub:** `https://github.com/bruno-olivaes/lhc-nsbi-dsi` (Release `v1.0.1`)
+* **Classificação CDD:** **006.3** (Inferência Estatística Avançada) + **539.7** (Física de Partículas)
 * **Revista-Alvo:** *Physical Review D (PRD)*
 * **Problema Central:** O periodograma clássico em histogramas sofre de **diluição por binning** ($\Delta u^2 / 12$), destruindo a informação de Fisher evento a evento e exigindo amplitudes irreais ($\varepsilon \gtrsim 0,30\text{--}0,50$) para detecção de modulações log-periódicas de alta frequência.
-* **Arquitetura Implementada:**
-  - Rede neural conditional density estimator em PyTorch modelando a densidade contínua não-binada $p(m_{\mu\mu} \mid \theta_{\text{DSI}}, \theta_{\text{SM}})$, com partição normalizada por **quadratura numérica contínua de Gauss-Legendre de 64 nós**.
+* **Metodologia Implementada:**
+  - Estimador de razão de verossimilhança contínua não-binada $p(m_{\mu\mu} \mid \theta_{\text{DSI}}, \theta_{\text{SM}})$, com partição normalizada por quadratura numérica contínua, avaliando a probabilidade individual de cada colisão sem discretização em histogramas.
   - Razão de verossimilhança de perfil contínua $q(\varepsilon) = -2 [\ln\mathcal{L}(\varepsilon, \hat{\hat{\boldsymbol{\eta}}}) - \ln\mathcal{L}(\hat{\varepsilon}, \hat{\boldsymbol{\eta}})] \sim \chi_1^2$ (Teorema de Wilks).
   - Calibração no contínuo Drell-Yan do CMS ($N = 1.745$ eventos de calibração).
 * **Resultados Auditados:**
-  - **Multiplicador de Sensibilidade de 9,5x:** O limite superior a 95% CL na amplitude de modulação DSI caiu de $\varepsilon_{95}^{\text{trad}} \le 0,5520$ (Lomb-Scargle binado tradicional) para **$\varepsilon_{95}^{\text{NSBI}} \le 0,0580$** (NSBI não-binado).
-  - **Imunidade a Falsos Alarmes:** A verossimilhança neural integrada ao motor de 5 portões atribuiu uma penalidade decisiva no Critério de Informação Bayesiano (**$\Delta\text{BIC} = -23,21$**), confirmando robustamente a hipótese nula e provando que a rede neural não alucina periodicidades espúrias onde há apenas contínuo de Poisson.
+  - **Multiplicador de Sensibilidade de 9,5x:** O limite superior a 95% CL na amplitude de modulação DSI caiu de $\varepsilon_{95}^{\text{trad}} \le 0,5520$ (Lomb-Scargle binado tradicional) para **$\varepsilon_{95}^{\text{unbinned}} \le 0,0580$** (verossimilhança não-binada contínua).
+  - **Imunidade a Falsos Alarmes:** A verossimilhança contínua integrada ao motor de 5 portões atribuiu uma penalidade decisiva no Critério de Informação Bayesiano (**$\Delta\text{BIC} = -23,21$**), confirmando robustamente a hipótese nula e provando imunidade total contra falsos alarmes.
 
 ---
 
 ### 🏛️ MONOGRAFIA MASTER UNIFICADA (*The Matrioska Protocol*)
 * **Título:** *The Matrioska Protocol: From Primordial Discrete Scale Invariance to Post-Quantum Agility*
 * **Extensão:** 34 páginas (PDF com tipografia acadêmica, figuras vetoriais e bibliografia unificada).
-* **DOI CERN / Zenodo:** `10.5281/zenodo.24124702`
+* **DOI Zenodo:** `10.5281/zenodo.24124702`
 * **Classificação CDD:** **500** (Ciências Naturais) $\to$ **530** (Física) $\to$ **530.1** (Teorias Físicas e Métodos Metrológicos).
-* **Escopo:** Síntese epistemológica que costura os 7 artigos em uma única narrativa metodológica, demonstrando como a transferência de métodos estatísticos entre cosmologia, física quântica e ciência da computação fortalece a reprodutibilidade e a integridade da ciência aberta.
+* **Escopo:** Síntese epistemológica consolidando os 5 artigos centrais (Papers 1 a 5) em uma única narrativa metodológica, demonstrando como a transferência de métodos estatísticos entre cosmologia, física quântica e criptografia fortalece a reprodutibilidade da ciência aberta. Os Papers 6 e 7 estendem a metodologia para dados de colisores do CERN.
 
 ---
 
@@ -225,3 +225,4 @@ Com base em todo o material técnico acima, forneça seu relatório respondendo:
    - Que ajustes finais ou esclarecimentos de redação você recomenda antes de clicar em "Submit"?
 
 ---FIM DO PROMPT PARA A 3ª IA---
+
