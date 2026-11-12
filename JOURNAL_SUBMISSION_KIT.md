@@ -5,7 +5,7 @@ This document provides ready-to-submit, formal cover letters for the four high-i
 Author: **Bruno Luçardo Olivaes**  
 Affiliation: **Independent Researcher, Brazil**  
 Email: **brunoolivaes@gmail.com**  
-ORCID: **[0009-0003-8857-7945](https://orcid.org/0009-0003-8857-7945)**  
+ORCID: **[0009-0003-5351-446X](https://orcid.org/0009-0003-5351-446X)**  
 
 ---
 
@@ -43,7 +43,7 @@ Sincerely,
 Bruno Luçardo Olivaes
 Independent Researcher, Brazil
 Email: brunoolivaes@gmail.com
-ORCID: 0009-0003-8857-7945
+ORCID: 0009-0003-5351-446X
 Repository: https://github.com/bruno-olivaes/dsi-cosmo-search
 Zenodo DOI: 10.5281/zenodo.24121677
 ```
@@ -86,7 +86,7 @@ Sincerely,
 Bruno Luçardo Olivaes
 Independent Researcher, Brazil
 Email: brunoolivaes@gmail.com
-ORCID: 0009-0003-8857-7945
+ORCID: 0009-0003-5351-446X
 Repository: https://github.com/bruno-olivaes/casimir-afm-spectroscopy
 Zenodo DOI: 10.5281/zenodo.24121687
 ```
@@ -129,7 +129,7 @@ Sincerely,
 Bruno Luçardo Olivaes
 Independent Researcher, Brazil
 Email: brunoolivaes@gmail.com
-ORCID: 0009-0003-8857-7945
+ORCID: 0009-0003-5351-446X
 Repository: https://github.com/bruno-olivaes/qiskit-lombscargle-zne
 Zenodo DOI: 10.5281/zenodo.24121693
 ```
@@ -169,7 +169,7 @@ Sincerely,
 Bruno Luçardo Olivaes
 Independent Researcher, Brazil
 Email: brunoolivaes@gmail.com
-ORCID: 0009-0003-8857-7945
+ORCID: 0009-0003-5351-446X
 Repository: https://github.com/bruno-olivaes/lhc-nsbi-dsi
 Zenodo DOI: 10.5281/zenodo.24149842
 ```
