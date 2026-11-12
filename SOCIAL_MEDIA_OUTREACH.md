@@ -207,3 +207,4 @@ Organizado formalmente sob a Classificação Decimal de Dewey (CDD 500 $\to$ 530
 Agradeço à comunidade científica e aos entusiastas de ciência aberta pelo diálogo e suporte!
 
 #OpenScience #TheoreticalPhysics #Cosmology #QuantumComputing #MachineLearning #Cybersecurity #CERN #Zenodo
+

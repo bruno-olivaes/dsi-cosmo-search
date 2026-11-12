@@ -7,7 +7,40 @@ Todas as artes correspondentes (formato 1080x1080) já estão salvas na pasta:
 
 ---
 
-## 🎨 1. Legendas Prontas para as 4 Artes (Feed / Carrossel)
+## 📸 1. Legenda Unificada para o Carrossel Completo (4 Slides)
+
+Use este texto se for publicar as 4 imagens juntas como um **Carrossel no Instagram**:
+
+```text
+🌌 Da cosmologia do Big Bang à inteligência artificial no CERN: como a metrologia rigorosa destrói falsas descobertas e expande os limites da ciência. (Deslize para ver ➡️)
+
+Durante os últimos meses, desenvolvi um programa de pesquisa independente integrando física fundamental, ciência de dados e computação quântica. O resultado são 7 artigos científicos completos e uma monografia master — tudo 100% aberto e indexado com DOIs permanentes no CERN/Zenodo.
+
+Deslize os slides para ver 4 destaques dessa jornada:
+
+1️⃣ SLIDE 1 (O Gancho): Quebrando a Barreira do Zeptoverso no LHC
+Como a Inferência Baseada em Simulação e a Razão de Verossimilhança de Perfil Contínua aumentaram a sensibilidade do LHC em 9.5x sem gastar um centavo em novos túneis.
+
+2️⃣ SLIDE 2 (O Mistério): O Fantasma de 583.5 nm no Efeito Casimir
+Como um erro clássico de interpolação matemática (fenômeno de Runge) criou anomalias inexistentes em laboratórios de ponta — e como nossa base física restaurou a verdade experimental.
+
+3️⃣ SLIDE 3 (O Futuro): O Telescópio Espacial ESA Euclid
+A Energia Escura é constante ou oscila? Mostramos como a missão Euclid da Agência Espacial Europeia quebrará a degenerescência cosmológica nos próximos 3 anos.
+
+4️⃣ SLIDE 4 (A Obra-Prima): The Matrioska Protocol
+Uma síntese de 34 páginas unificando 7 artigos sob um protocolo rigoroso de 5 portões anti-alucinação.
+
+🔬 A ciência autêntica não é sobre forçar anomalias para obter manchetes rápidas; é sobre blindar as ferramentas de medição para que apenas a realidade sobreviva.
+
+👉 Leia os 7 artigos e baixe a monografia completa de graça:
+🔗 Link na bio ou acesse: bruno-olivaes.github.io
+
+#TheMatrioskaProtocol #CienciaAberta #OpenScience #Fisica #CERN #LHC #InteligenciaArtificial #MachineLearning #ComputacaoQuantica #Cosmologia #Metrologia #DataScience
+```
+
+---
+
+## 🎨 2. Legendas Prontas para as 4 Artes Individuais (Feed)
 
 ### 📌 ARTE 1: Paper 7 (LHC NSBI - O Ganho de 9.5x)
 **Arquivo:** `01_instagram_paper7_nsbi_9.5x.png`  
@@ -103,21 +136,22 @@ Tudo arquivado permanentemente sob o selo oficial do CERN / Zenodo (DOI: 10.5281
 
 ---
 
-## 🎬 2. Roteiro de Vídeo Curto (Reels / Shorts / TikTok - 15 Segundos)
+## 🎬 3. Roteiro de Vídeo Curto (Reels / Stories / TikTok — 30 Segundos)
 
-* **Áudio Sugerido:** Trilha instrumental moderna, cinematográfica ou de suspense tech (*slow synthwave*, *Inception-style* ou *Oppenheimer score*).
+* **Áudio Sugerido:** Trilha instrumental moderna, cinematográfica ou suspense tecnológico (*synthwave lento*, estilo *Oppenheimer* ou *Hans Zimmer*).
 * **Formato:** Vertical (9:16).
 
-| Tempo (segundos) | Visual / O que mostrar | Texto na Tela (Legenda do Vídeo) | Locução ou Áudio |
+| Tempo | Visual / O que mostrar na gravação | Texto em Destaque na Tela | Locução (Voz do Autor ou IA) |
 | :---: | :--- | :--- | :--- |
-| **00s - 03s** | Transição rápida: foto do LHC / CERN e gráfico do Paper 7 subindo. | *"E se uma Inteligência Artificial aumentasse a visão do CERN em 9.5 vezes?"* | [Batida de início impactante] |
-| **04s - 07s** | Gravação de tela rápida rolando o site oficial `bruno-olivaes.github.io`. | *"7 artigos científicos. Do satélite Planck ao computador quântico da IBM."* | *"Construí um portfólio completo de física e computação..."* |
-| **08s - 11s** | Close na capa do livro (`book_cover.png`) com o selo do DOI em destaque. | *"The Matrioska Protocol: 34 páginas de ciência aberta e reprodutível."* | *"...unificado em uma monografia oficial com DOI do CERN."* |
-| **12s - 15s** | Tela final com a URL em destaque e seta apontando para a bio. | *"Leia todos os papers de graça no link da bio: bruno-olivaes.github.io"* | *"Acesse agora e confira tudo de graça no link da bio."* |
+| **00s – 05s** | Zoom rápido saindo de uma foto do túnel do LHC (CERN) direto para a capa do livro (*The Matrioska Protocol*). | *"E se você pudesse auditar os dados do maior acelerador de partículas do mundo do seu computador?"* | "E se você pudesse auditar os dados do CERN diretamente do seu computador?" |
+| **05s – 10s** | Tela mostrando o portal do CERN Open Data com as 62.214 colisões de dimuons e o código Python rodando no VS Code. | *"62.214 colisões reais do CMS analisadas linha por linha."* | "Foi exatamente o que fiz: baixei 62 mil colisões reais do LHC e apliquei métodos estatísticos rigorosos." |
+| **10s – 17s** | Gráfico do Paper 7 aparecendo, mostrando a curva de verossimilhança e o multiplicador de **9.5x** na sensibilidade. | *"9.5x mais sensibilidade para enxergar o zeptoverso."* | "Desenvolvemos uma verossimilhança contínua que ampliou a sensibilidade em nove vezes e meia, sem construir aceleradores novos." |
+| **17s – 23s** | Rolagem rápida pelo site `bruno-olivaes.github.io` mostrando os 7 papers: cosmologia, forças quânticas, Qiskit e criptografia pós-quântica. | *"7 papers. 1 monografia unificada. 100% código aberto."* | "Esse resultado faz parte de um programa de 7 artigos científicos e uma monografia de 34 páginas." |
+| **23s – 30s** | Close na capa oficial do livro com o selo do DOI Zenodo (`10.5281/zenodo.24124702`), seguido pela tela final com o endereço do site e seta para a bio. | *"The Matrioska Protocol — Baixe grátis agora no link da bio: bruno-olivaes.github.io"* | "The Matrioska Protocol está publicado com DOI oficial do CERN. Baixe gratuitamente no link da minha bio!" |
 
 ---
 
-## 🏷️ 3. Conjuntos de Hashtags Otimizadas
+## 🏷️ 4. Conjuntos de Hashtags Estratégicas Otimizadas
 
 * **Geral & Ciência Aberta:**  
   `#CienciaAberta #OpenScience #Fisica #PesquisaCientifica #DataScience #Python #Metrologia`

@@ -136,7 +136,7 @@ Para evitar que flutuações de ruído sejam confundidas com física nova, nenhu
 
 ### 💥 PAPER 6: DSI em Espectros de Massa do LHC (CMS Open Data)
 * **Título:** *A Certified Search for Discrete Scale Invariance in LHC Dimuon Mass Spectra*
-* **Repositório GitHub:** `https://github.com/bruno-olivaes/lhc-dsi-search` (Release `v1.0.1`)
+* **DOI Zenodo:** `10.5281/zenodo.24149840` | **Repositório GitHub:** `https://github.com/bruno-olivaes/lhc-dsi-search` (Release `v1.0.1`)
 * **Classificação CDD:** **539.7** (Física de Partículas / Altas Energias) + **006.3** (Ciência de Dados)
 * **Revista-Alvo:** *European Physical Journal C (EPJC)*
 * **Dados Primários:** $N = 62.214$ eventos físicos de pares dimuon com cargas opostas ($\mu^+\mu^-$) registrados pelo experimento CMS no CERN ($\sqrt{s} = 7\,\text{TeV}$, CERN Open Data Portal, DOI: 10.7483/OPENDATA.CMS.7001.303), cobrindo massas invariantes de $2,0$ a $109,9\,\text{GeV}$.
@@ -151,7 +151,7 @@ Para evitar que flutuações de ruído sejam confundidas com física nova, nenhu
 
 ### ⚡ PAPER 7: Razão de Verossimilhança Não-Binada no LHC
 * **Título:** *Breaking the Zeptouniverse Sensitivity Barrier: Unbinned Continuous Likelihood for Certified Discrete Scale Invariance Searches at the LHC*
-* **Repositório GitHub:** `https://github.com/bruno-olivaes/lhc-nsbi-dsi` (Release `v1.0.1`)
+* **DOI Zenodo:** `10.5281/zenodo.24149842` | **Repositório GitHub:** `https://github.com/bruno-olivaes/lhc-nsbi-dsi` (Release `v1.0.1`)
 * **Classificação CDD:** **006.3** (Inferência Estatística Avançada) + **539.7** (Física de Partículas)
 * **Revista-Alvo:** *Physical Review D (PRD)*
 * **Problema Central:** O periodograma clássico em histogramas sofre de **diluição por binning** ($\Delta u^2 / 12$), destruindo a informação de Fisher evento a evento e exigindo amplitudes irreais ($\varepsilon \gtrsim 0,30\text{--}0,50$) para detecção de modulações log-periódicas de alta frequência.
