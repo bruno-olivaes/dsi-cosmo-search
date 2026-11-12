@@ -23,7 +23,7 @@ Please find enclosed our manuscript entitled "Constraints on Primordial Discrete
 Discrete Scale Invariance (DSI) and associated log-periodic oscillations in primordial cosmological perturbation spectra have garnered persistent theoretical interest as signatures of complex inflaton potentials, limit-cycle inflation, and non-trivial vacuum geometries. However, unconstrained grid searches in spectral analysis frequently fall prey to the look-elsewhere effect, trial factors, and post-selection bias.
 
 In this work, we present the first fully pre-registered, radix-agnostic search for primordial DSI applied to the official Planck 2018 PR3 binned temperature power spectrum. To guarantee methodological immunity against noise-mining:
-1. The analysis adheres to a strict three-stage estimation protocol governed by five mandatory integrity gates (resolvability, 2-RMS amplitude threshold, parameter precision, look-elsewhere bootstrap-of-maximum significance, and Delta-BIC evidence).
+1. To ensure strict protection against post-hoc parameter tuning and the Look-Elsewhere Effect, the complete five-gate statistical pipeline and decision thresholds were locked prior to final data evaluation via an immutable, cryptographically verifiable Git tag (`v2.1.2`) permanently archived on CERN/Zenodo (DOI: 10.5281/zenodo.24121677), coupled with SHA-256 integrity verification of the official NASA/IPAC Planck PR3 bandpowers.
 2. The empirical significance of candidate modes is evaluated against a non-parametric ensemble of 1,000 phase-scrambled surrogate datasets.
 3. The most prominent spectral candidate (hat{lambda} = 4.12 +/- 0.31) fails the amplitude and look-elsewhere gates, yielding a post-trial significance of p_corrected = 0.975, consistent with Gaussian cosmic variance.
 4. We establish certified 95% CL upper limits on the primordial modulation amplitude (epsilon < 0.05) across a wide scaling factor domain lambda in [1.1, 148].
@@ -68,7 +68,9 @@ In this paper, we conduct a systematic metrological audit demonstrating that suc
 2. Natural cubic spline interpolations producing synthetic log-periodic phase undulations under non-uniform spatial sampling.
 3. Uncompensated electrostatic patch potentials in Kelvin probe measurements.
 
-We establish a rigorous, gate-certified data-processing protocol that replaces unconstrained spline and polynomial subtractions with adaptive low-order Chebyshev baselines and Generalized Lomb-Scargle periodograms coupled to Fisher-information matrices. We benchmark this protocol on synthetic and experimental AFM force curves, demonstrating 100% rejection of spurious periodicities while preserving genuine sub-picoNewton physical modulations.
+We establish a rigorous, gate-certified data-processing protocol that replaces unconstrained spline and polynomial subtractions with adaptive low-order Chebyshev baselines and Generalized Lomb-Scargle periodograms coupled to Fisher-information matrices. Beyond demonstrating how polynomial detrending induces Runge boundary oscillations against $z^{-4}$ tails and how cubic splines attenuate sub-micron signals by 57%, we provide an explicit first-order Taylor expansion proof showing that experimental contact-point calibration offsets ($\delta z_0$) generate a spurious $-4 C_4 \delta z_0 z^{-5}$ term that is analytically absorbed by our physically motivated $\{1, z^{-4}, z^{-5}\}$ baseline. We submit this manuscript under the standard subscription track (zero APC).
+
+We benchmark this protocol on synthetic and experimental AFM force curves, demonstrating 100% rejection of spurious periodicities while preserving genuine sub-picoNewton physical modulations.
 
 Given RSI's leadership in physical instrumentation, experimental metrology, and the identification of experimental systematic errors, this work provides timely, actionable guidance for laboratories conducting precision surface-force measurements worldwide.
 
@@ -105,6 +107,8 @@ Please find enclosed our manuscript entitled "When Harmonic ZNE Fails: A Compara
 Quantum Error Mitigation (QEM) is vital for achieving quantum utility on Noisy Intermediate-Scale Quantum (NISQ) hardware prior to fault-tolerant quantum error correction. Zero-Noise Extrapolation (ZNE) via unitary pulse stretching or digital gate folding is widely employed. Recently, harmonic and spectral extrapolation models have been proposed to capture coherent oscillatory error phases that escape standard polynomial or exponential fits.
 
 In this work, we conduct an extensive, reproducible benchmark comparing Harmonic ZNE (utilizing Generalized Lomb-Scargle spectral decoupling) against standard Polynomial/Exponential ZNE and Randomized Compiling (Pauli Twirling) across 1 to 4 superconducting transmon qubits using calibrated heavy-hex noise models and Qiskit pulse stretching emulations.
+
+To rigorously isolate algorithmic failure modes from time-dependent hardware calibration drift (such as transient $T_1/T_2$ fluctuations and readout instability), our benchmark employs controlled, high-fidelity Qiskit 2.x (`AerSimulator`) emulations parameterized by realistic superconducting heavy-hex transmon noise models under a strict shot budget ($N_{\mathrm{total}} = 24,000$). This controlled ablation architecture allows us to identify the exact multi-qubit spectator crosstalk threshold at which spectral/harmonic ZNE breaks down when Pauli Twirling is omitted.
 
 Our findings reveal critical operational boundaries for quantum practitioners:
 1. On 1- and 2-qubit circuits dominated by single-mode drive crosstalk, Harmonic ZNE outperforms standard polynomial extrapolation, reducing state estimation error by up to 34%.
@@ -145,7 +149,7 @@ We submit our manuscript entitled "Breaking the Zeptouniverse Sensitivity Barrie
 
 Searches for physics beyond the Standard Model at distance scales below 10^-18 m (the zeptouniverse) are increasingly limited not by collision luminosity, but by systematic statistical dilution in histogram-level analyses. When searching for subtle, continuous spectral phenomena—such as log-periodic Discrete Scale Invariance (DSI) predicted by conformal hidden sectors or quantum gravity limit cycles—traditional binned Generalized Lomb-Scargle periodograms discretize continuous invariant mass coordinates, destroying phase coherence and diluting the Fisher information metric. Consequently, classical binned searches can only constrain modulations with large signal amplitudes (epsilon > 0.30 - 0.50).
 
-In this paper, we demonstrate that unbinned continuous profile likelihood inference breaks this sensitivity barrier:
+In this paper, we demonstrate that unbinned continuous profile likelihood inference breaks this sensitivity barrier. Crucially, rather than relying on an opaque black-box classifier, our architecture formulates an explicit Unbinned Continuous Profile Likelihood normalized at every parameter step via 64-node Gauss-Legendre numerical quadrature over 62,214 CMS dimuon events. By eliminating the $\Delta u^2 / 12$ intra-bin Fisher information dilution inherent to binned Lomb-Scargle periodograms (documented in our companion baseline study, Zenodo DOI: 10.5281/zenodo.24149840), the method achieves a $9.5\times$ empirical improvement in 95% CL upper-limit sensitivity ($\varepsilon_{95} \le 0.0580$ vs. $0.5520$) while strictly preserving false-positive immunity:
 1. We construct a continuous likelihood ratio estimator p(m_mumu | theta_DSI, theta_SM) calibrated on CERN Open Data dimuon events from CMS Run 2010B.
 2. The continuous likelihood leverages exact numerical quadrature partition functions to enable unbinned profile likelihood evaluations q(epsilon) = -2 Delta ln L without histogram binning loss.
 3. In a head-to-head benchmark on identical Drell-Yan continuum collisions (m in [11, 75] GeV), the unbinned approach improves the 95% CL upper limit from epsilon_95^trad <= 0.5520 down to epsilon_95^unbinned <= 0.0580—achieving a certified 9.5x sensitivity enhancement without requiring additional beam time.
@@ -167,6 +171,6 @@ Independent Researcher, Brazil
 Email: brunoolivaes@gmail.com
 ORCID: 0009-0003-8857-7945
 Repository: https://github.com/bruno-olivaes/lhc-nsbi-dsi
-Release: https://github.com/bruno-olivaes/lhc-nsbi-dsi/releases/tag/v1.0.0
+Zenodo DOI: 10.5281/zenodo.24149842
 ```
 
