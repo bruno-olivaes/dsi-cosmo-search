@@ -1,7 +1,11 @@
-# 🧭 MASTER PUBLICATION CHECKLIST: Rota Zenodo (DOIs) + Academia.edu (Visibilidade)
+# 🧭 MASTER PUBLICATION CHECKLIST: Rota Zenodo (DOIs) + Academia.edu + GitHub Pages
 
 Guia central de submissão e publicação para o autor (**Bruno L. Olivaes**).  
-Focado na estratégia ágil e independente: **DOIs Oficiais do CERN via Zenodo** + **Vitrine Acadêmica Global via Academia.edu**.
+Focado na estratégia ágil e independente: **DOIs Oficiais do CERN via Zenodo** + **Vitrine Acadêmica Global via Academia.edu** + **Website Oficial do Portfólio**.
+
+> 🌐 **Vitrine Central do Portfólio no GitHub Pages:**  
+> 👉 **[https://bruno-olivaes.github.io](https://bruno-olivaes.github.io)**  
+> *(Hospedagem 100% gratuita, visual acadêmico moderno, leitura direta de PDFs e links permanentes para código e DOIs).*
 
 ---
 
