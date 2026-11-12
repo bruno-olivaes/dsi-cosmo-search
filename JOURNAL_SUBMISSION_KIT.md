@@ -29,7 +29,7 @@ In this work, we present the first fully pre-registered, radix-agnostic search f
 4. We establish certified 95% CL upper limits on the primordial modulation amplitude (epsilon < 0.05) across a wide scaling factor domain lambda in [1.1, 148].
 5. We replicate the protocol on synthetic Large-Scale Structure mock spectra matching the baseline precision of the Dark Energy Spectroscopic Instrument (DESI) DR2, confirming identical null behavior.
 
-All code, data checksum manifests, pre-registered protocols (OSF), and verification pipelines are open-source and permanently archived. Given MNRAS's dedication to observational cosmology, rigorous statistical methodologies, and reproducible science, we believe this manuscript will be of high interest to your readership.
+All code, data checksum manifests, pre-registered protocols (v2.1.2), and verification pipelines are open-source and permanently archived. Given MNRAS's dedication to observational cosmology, rigorous statistical methodologies, and reproducible science, we believe this manuscript will be of high interest to your readership.
 
 This manuscript is original, has not been published elsewhere, and is not currently under consideration by any other journal. All authors approve of this submission.
 
@@ -104,7 +104,7 @@ Please find enclosed our manuscript entitled "When Harmonic ZNE Fails: A Compara
 
 Quantum Error Mitigation (QEM) is vital for achieving quantum utility on Noisy Intermediate-Scale Quantum (NISQ) hardware prior to fault-tolerant quantum error correction. Zero-Noise Extrapolation (ZNE) via unitary pulse stretching or digital gate folding is widely employed. Recently, harmonic and spectral extrapolation models have been proposed to capture coherent oscillatory error phases that escape standard polynomial or exponential fits.
 
-In this work, we conduct an extensive, reproducible benchmark comparing Harmonic ZNE (utilizing Generalized Lomb-Scargle spectral decoupling) against standard Polynomial/Exponential ZNE and Randomized Compiling (Pauli Twirling) across 1 to 4 superconducting transmon qubits using IBM Quantum hardware and heavy-hex noise models.
+In this work, we conduct an extensive, reproducible benchmark comparing Harmonic ZNE (utilizing Generalized Lomb-Scargle spectral decoupling) against standard Polynomial/Exponential ZNE and Randomized Compiling (Pauli Twirling) across 1 to 4 superconducting transmon qubits using calibrated heavy-hex noise models and Qiskit pulse stretching emulations.
 
 Our findings reveal critical operational boundaries for quantum practitioners:
 1. On 1- and 2-qubit circuits dominated by single-mode drive crosstalk, Harmonic ZNE outperforms standard polynomial extrapolation, reducing state estimation error by up to 34%.
@@ -145,13 +145,13 @@ We submit our manuscript entitled "Breaking the Zeptouniverse Sensitivity Barrie
 
 Searches for physics beyond the Standard Model at distance scales below 10^-18 m (the zeptouniverse) are increasingly limited not by collision luminosity, but by systematic statistical dilution in histogram-level analyses. When searching for subtle, continuous spectral phenomena—such as log-periodic Discrete Scale Invariance (DSI) predicted by conformal hidden sectors or quantum gravity limit cycles—traditional binned Generalized Lomb-Scargle periodograms discretize continuous invariant mass coordinates, destroying phase coherence and diluting the Fisher information metric. Consequently, classical binned searches can only constrain modulations with large signal amplitudes (epsilon > 0.30 - 0.50).
 
-In this paper, we demonstrate that unbinned Neural Simulation-Based Inference (NSBI) breaks this sensitivity barrier:
-1. We construct a continuous conditional neural likelihood ratio estimator q_psi(m_mumu | theta_DSI, theta_SM) trained on CERN Open Data dimuon events from CMS Run 2010B.
-2. The neural architecture leverages Gauss-Legendre quadrature partition functions to enable exact unbinned profile likelihood evaluations q(epsilon) = -2 Delta ln L.
-3. In a head-to-head benchmark on identical Drell-Yan continuum collisions (m in [11, 75] GeV), NSBI improves the 95% CL upper limit from epsilon_95^trad <= 0.5520 down to epsilon_95^NSBI <= 0.0580—achieving a certified 9.5x sensitivity enhancement without requiring additional beam time.
-4. Integrated into our audited five-gate certification engine, the NSBI framework yields a decisive Bayesian Information Criterion penalty (Delta-BIC = -23.21), preventing false-positive discoveries while achieving sub-zeptometer exclusion bounds.
+In this paper, we demonstrate that unbinned continuous profile likelihood inference breaks this sensitivity barrier:
+1. We construct a continuous likelihood ratio estimator p(m_mumu | theta_DSI, theta_SM) calibrated on CERN Open Data dimuon events from CMS Run 2010B.
+2. The continuous likelihood leverages exact numerical quadrature partition functions to enable unbinned profile likelihood evaluations q(epsilon) = -2 Delta ln L without histogram binning loss.
+3. In a head-to-head benchmark on identical Drell-Yan continuum collisions (m in [11, 75] GeV), the unbinned approach improves the 95% CL upper limit from epsilon_95^trad <= 0.5520 down to epsilon_95^unbinned <= 0.0580—achieving a certified 9.5x sensitivity enhancement without requiring additional beam time.
+4. Integrated into our audited five-gate certification engine, the unbinned likelihood yields a decisive Bayesian Information Criterion penalty (Delta-BIC = -23.21), preventing false-positive discoveries.
 
-This work bridges state-of-the-art simulation-based machine learning with rigorous experimental metrology in collider physics. Because PRD is the premier venue for high-energy physics phenomenology, collider search methodology, and machine learning applications in HEP, we believe this manuscript will be of broad interest to your readership.
+This work bridges advanced continuous likelihood estimation with rigorous experimental metrology in collider physics. Because PRD is the premier venue for high-energy physics phenomenology, collider search methodology, and statistical methods in HEP, we believe this manuscript will be of broad interest to your readership.
 
 The manuscript has not been published previously and is not under consideration elsewhere.
 
@@ -169,3 +169,4 @@ ORCID: 0009-0003-8857-7945
 Repository: https://github.com/bruno-olivaes/lhc-nsbi-dsi
 Release: https://github.com/bruno-olivaes/lhc-nsbi-dsi/releases/tag/v1.0.0
 ```
+
