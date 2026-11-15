@@ -141,8 +141,8 @@ This repository is part of a 7-paper multidisciplinary research program explorin
 | **Paper 4: Quantum Error Mitigation** (`qiskit-lombscargle-zne`) | **006.3** / **530.1** | AI & Quantum Computing / Quantum Physics | Lomb-Scargle Zero-Noise Extrapolation (ZNE) on transmon qubits. |
 | **Paper 5: Post-Quantum TLS 1.3 Wire Cost** (`pqc-crypto-agility-benchmark`) | **005.8** / **006.3** | Network Security / Computer Science | Wire overhead & TCP fragmentation benchmarks for NIST FIPS 203 (ML-KEM). |
 | **Paper 6: Certified DSI in LHC Spectra** (`lhc-dsi-search`) | **539.7** / **006.3** | Particle Physics / Data Science | 3-stage certified DSI search in CMS Open Data dimuon invariant mass spectra. |
-| **Paper 7: Neural SBI for LHC Searches** (`lhc-nsbi-dsi`) | **006.3** / **539.7** | AI & Machine Learning / High Energy Physics | Unbinned Neural Simulation-Based Inference providing $9.5\times$ sensitivity gain. |
-| **Unified Master Monograph** (`The Matrioska Protocol`) | **500** $\to$ **530.1** | Natural Sciences / Physical Theories | 34-page synthesis ([DOI: 10.5281/zenodo.24124702](https://doi.org/10.5281/zenodo.24124702)). |
+| **Paper 7: Neural SBI for LHC Searches** (`lhc-nsbi-dsi`) | **006.3** / **539.7** | AI & Machine Learning / High Energy Physics | Unbinned composite $4\times 64$-node Gauss-Legendre likelihood & PyTorch NSBI providing up to $29.1\times$ sensitivity gain vs. 20-bin ($5.70\times$ vs. 40-bin). |
+| **Unified Master Monograph** (`The Matrioska Protocol`) | **500** $\to$ **530.1** | Natural Sciences / Physical Theories | 45-page synthesis ([DOI: 10.5281/zenodo.24124702](https://doi.org/10.5281/zenodo.24124702)). |
 
 ---
 

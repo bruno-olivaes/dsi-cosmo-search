@@ -15,7 +15,7 @@
 | **Paper 4: Quantum Error Mitigation**<br>*(qiskit-lombscargle-zne)* | **006.3**<br>**530.1** | Inteligência Artificial / Computação Quântica<br>Física Quântica | Benchmarking rigoroso de Zero-Noise Extrapolation (ZNE) harmônico versus Pauli Twirling em processadores transmon NISQ. |
 | **Paper 5: Post-Quantum TLS 1.3 Wire Cost**<br>*(pqc-crypto-agility-benchmark)* | **005.8**<br>**006.3** | Segurança de Dados e Redes<br>Ciência da Computação | Avaliação em nível de pacote da sobrecarga de rede do padrão NIST FIPS 203 (ML-KEM-768) e fragmentação TCP. |
 | **Paper 6: Certified DSI in LHC Spectra**<br>*(lhc-dsi-search)* | **539.7**<br>**006.3** | Física Atômica e Nuclear (Partículas)<br>Análise Computacional de Dados | Busca de invariância de escala discreta em espectros de massa invariante dimuon ($\mu^+\mu^-$) nos dados abertos do CMS/CERN. |
-| **Paper 7: Neural SBI for LHC Searches**<br>*(lhc-nsbi-dsi)* | **006.3**<br>**539.7** | Inteligência Artificial / Aprendizado de Máquina<br>Física de Altas Energias | Redes neurais para inferência baseada em simulação (NSBI) não-binada, multiplicando a sensibilidade do acelerador em $9,5\times$. |
+| **Paper 7: Neural SBI for LHC Searches**<br>*(lhc-nsbi-dsi)* | **006.3**<br>**539.7** | Inteligência Artificial / Aprendizado de Máquina<br>Física de Altas Energias | Redes neurais para inferência baseada em simulação (NSBI) não-binada, multiplicando a sensibilidade do acelerador em até $29,1\times$ vs. 20 bins ($5,7\times$ vs. 40 bins) via verossimilhança contínua de quadratura ($4\times 64$ nós GL) e surrogado neural PyTorch. |
 
 ---
 

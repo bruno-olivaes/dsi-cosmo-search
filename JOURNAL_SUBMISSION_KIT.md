@@ -1,3 +1,4 @@
+
 # 📬 JOURNAL SUBMISSION KIT: Professional Cover Letters
 
 This document provides ready-to-submit, formal cover letters for the four high-impact papers in the portfolio, tailored to their respective target peer-reviewed journals.
