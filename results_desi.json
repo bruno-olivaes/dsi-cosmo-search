@@ -19,10 +19,10 @@
       "gate_amplitude": false,
       "gate_precision": true,
       "gate_plevel": false,
+      "gate_bic": false,
       "power_observed": 0.18441600355086593,
       "p_corrected": 0.314,
-      "delta_bic": NaN,
-      "gate_bic": false,
+      "delta_bic": 8.79601739122836,
       "certified": false
     },
     "certified": false

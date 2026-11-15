@@ -49,13 +49,11 @@ def check_c(n=200):
 def check_b(data_dir):
     try:
         from src.data_loader import load_planck_tt
-        ell, Dl, cov = load_planck_tt(data_dir, binning='binned')
+        ell, Dl, cov, bestfit = load_planck_tt(data_dir, binning='binned', return_bestfit=True)
     except FileNotFoundError as e:
         print(f"(b) SKIPPED: {e}")
         return None
-    u = np.log(ell)
-    baseline = np.polyval(np.polyfit(u, Dl, 3), u)
-    r = run_protocol(ell, Dl - baseline, cov=cov, seed=42)
+    r = run_protocol(ell, Dl - bestfit, cov=cov, seed=42)
     print(f"(b) planck_certified={r['certified']} gates={r['stage3']}")
     return not r['certified']
 

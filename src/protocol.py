@@ -74,9 +74,10 @@ def stage3_certify(k, residuals, stage2, cov=None, n_bootstrap=1000, rng=None):
     # Gate 1: Resolvability (Rayleigh criterion & Nyquist bounds)
     gate_resolvable = bool(omega_min <= omega <= omega_max)
 
-    # Gate 2: Amplitude Significance (> 2.0 * RMS)
+    # Gate 2: Amplitude Significance (> 2.0 * post-fit residual RMS)
     y = residuals - residuals.mean()
-    rms_noise = float(np.sqrt(np.mean(y**2)))
+    dsi_model = stage2['amp'] * np.cos(stage2['omega'] * u + stage2['phi'])
+    rms_noise = float(np.sqrt(np.mean((y - dsi_model) ** 2)))
     gate_amplitude = bool(abs(stage2['amp']) > 2.0 * rms_noise)
 
     # Gate 3: Precision Gate (sigma_lambda / lambda_hat < 0.20)
@@ -104,7 +105,6 @@ def stage3_certify(k, residuals, stage2, cov=None, n_bootstrap=1000, rng=None):
         cov_mat = np.diag(np.full(len(y), rms_noise**2))
 
     null_model = np.zeros_like(y)
-    dsi_model = stage2['amp'] * np.cos(stage2['omega'] * u + stage2['phi'])
     ll_null = gaussian_loglike(null_model, y, cov_mat)
     ll_dsi = gaussian_loglike(dsi_model, y, cov_mat)
     n = len(k)

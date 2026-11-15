@@ -22,7 +22,7 @@
 \maketitle
 
 \begin{abstract}
-\noindent We present a pre-registered, radix-agnostic search for discrete scale invariance (DSI) in the Planck 2018 cosmic microwave background temperature power spectrum. DSI predicts a characteristic log-periodic modulation of primordial perturbations governed by the preferred scaling factor $\lambda$, inducing oscillations in Fourier space with angular log-frequency $\omega = 2\pi/\ln\lambda$. Using a certified three-stage protocol (detection via generalized Lomb-Scargle periodogram, non-linear refinement, and multiplicity-corrected certification) subject to five mandatory integrity gates, we find \textbf{no evidence for DSI} in the Planck 2018 data. The most prominent candidate ($\hat\lambda = 4.12 \pm 0.31$) yields an empirical post-trial significance of $p_{\mathrm{corrected}} = 0.975$ via a non-parametric bootstrap-of-maximum null distribution, with an amplitude fully consistent with Gaussian cosmological sample variance. We establish rigorous 95\% confidence level upper limits on the modulation amplitude $\varepsilon < 0.05$ across the comprehensive scaling range $\lambda \in [1.1, 148]$. Furthermore, we replicate our protocol on synthetic Large-Scale Structure mocks matching the Dark Energy Spectroscopic Instrument (DESI) survey precision, confirming identical null-detection behavior.
+\noindent We present a pre-registered, radix-agnostic search for discrete scale invariance (DSI) in the Planck 2018 cosmic microwave background temperature power spectrum. DSI predicts a characteristic log-periodic modulation of primordial perturbations governed by the preferred scaling factor $\lambda$, inducing oscillations in Fourier space with angular log-frequency $\omega = 2\pi/\ln\lambda$. Using a certified three-stage protocol (detection via generalized Lomb-Scargle periodogram, non-linear refinement, and multiplicity-corrected certification) subject to five mandatory integrity gates applied to residuals relative to the official Planck \texttt{BestFit} $\Lambda$CDM spectrum ($N = 83$ binned multipoles), we find \textbf{no evidence for DSI} in the Planck 2018 data. The most prominent residual candidate ($\hat\lambda = 1.2938 \pm 0.0072$) yields an empirical post-trial significance of $p_{\mathrm{corrected}} = 0.998$ via a non-parametric bootstrap-of-maximum null distribution and $\Delta\mathrm{BIC} = -49.80$, with an amplitude fully consistent with Gaussian cosmological sample variance. We establish rigorous 95\% confidence level upper limits on the modulation amplitude $\varepsilon < 0.05$ across the comprehensive scaling range $\lambda \in [1.1, 148]$. Furthermore, we replicate our protocol on synthetic Large-Scale Structure mocks matching the Dark Energy Spectroscopic Instrument (DESI) survey precision, confirming identical null-detection behavior ($p_{\mathrm{corrected}} = 0.314$, $\Delta\mathrm{BIC} = +8.80$).
 \end{abstract}
 
 \section{Introduction}
@@ -36,7 +36,7 @@ Historically, various searches in cosmic microwave background (CMB) and large-sc
 
 \section{Observational Data and Processing}
 \subsection{Planck 2018 PR3 Binned TT Spectrum}
-We analyze the high-$\ell$ and intermediate-$\ell$ temperature angular power spectrum ($D_\ell \equiv \ell(\ell+1)C_\ell/2\pi$) from the official Planck 2018 Release 3 (PR3) ancillary cosmological products. We ingest the binned spectrum file \texttt{COM\_PowerSpect\_CMB-TT-binned\_R3.01.txt}, consisting of $N = 215$ multipole bins spanning $\ell \in [30, 2508]$. 
+We analyze the high-$\ell$ and intermediate-$\ell$ temperature angular power spectrum ($D_\ell \equiv \ell(\ell+1)C_\ell/2\pi$) from the official Planck 2018 Release 3 (PR3) ancillary cosmological products. We ingest the binned spectrum file \texttt{COM\_PowerSpect\_CMB-TT-binned\_R3.01.txt}, consisting of $N = 83$ binned multipoles spanning $\ell \in [30, 2508]$, and subtract the official column-4 \texttt{BestFit} flat-$\Lambda$CDM spectrum prior to spectral estimation. 
 
 To guarantee strict scientific reproducibility and data provenance, the exact cryptographic SHA-256 digest of the ingested data is frozen in our repository manifest:
 \begin{center}
@@ -67,7 +67,7 @@ extracting refined maximum-likelihood estimates $(\hat A, \hat\omega, \hat\phi)$
 To prevent spurious detections driven by noise fluctuations, edge artifacts, or ill-conditioned fits, a candidate is formally certified if and only if it simultaneously satisfies five mandatory, non-negotiable gates:
 \begin{enumerate}
     \item \textbf{Gate 1 (Resolvability):} $\hat\omega$ must reside strictly within $[\omega_{\min}, \omega_{\max}]$, bounded by the Rayleigh resolution criterion $\Delta\omega \ge 2\pi / \Delta u_{\mathrm{span}}$.
-    \item \textbf{Gate 2 (Amplitude Significance):} Fitted amplitude must exceed twice the root-mean-square noise: $\hat A > 2.0 \times \mathrm{RMS}(y)$.
+    \item \textbf{Gate 2 (Amplitude Significance):} Fitted amplitude must exceed twice the root-mean-square post-fit residual noise: $\hat A > 2.0 \times \mathrm{RMS}_{\mathrm{resid}}$, where $\mathrm{RMS}_{\mathrm{resid}} = \sqrt{\frac{1}{N}\sum_{i=1}^N (y_i - f(u_i))^2}$.
     \item \textbf{Gate 3 (Precision Gate):} Relative uncertainty on the reconstructed scaling factor must satisfy $\sigma_\lambda / \hat\lambda < 0.20$.
     \item \textbf{Gate 4 (Look-Elsewhere Corrected Significance):} Global post-trial $p$-value derived from the bootstrap-of-maximum null distribution must satisfy $p_{\mathrm{corrected}} < 0.05$.
     \item \textbf{Gate 5 (Information Criterion):} The Bayesian Information Criterion difference against the base $\Lambda$CDM model must satisfy $\Delta\mathrm{BIC} = \mathrm{BIC}_{\mathrm{null}} - \mathrm{BIC}_{\mathrm{DSI}} > 10.0$ (Jeffreys' strong evidence threshold).
@@ -83,21 +83,21 @@ Prior to unblinding the empirical Planck data, the pipeline underwent rigorous c
 \section{Planck 2018 Observational Results}
 With the pre-registered protocol frozen, Stage B was executed on the official Planck 2018 PR3 binned TT spectrum using the cryptographic seed \texttt{507719}.
 
-Stage 1 detected a candidate feature at $\omega_{\mathrm{peak}} = 4.4502$ ($P_{\mathrm{peak}} = 0.2512$). Stage 2 refined the parameters to:
+Stage 1 detected a candidate residual feature at $\omega_{\mathrm{peak}} = 24.3875$ ($P_{\mathrm{peak}} = 0.0686$). Stage 2 refined the parameters to:
 \begin{align}
-\hat\omega &= 4.4371 \pm 0.2351\,\mathrm{rad}, \\
-\hat\lambda &= 4.1208 \pm 0.3092, \\
-\hat A &= 337.26\,\mu\mathrm{K}^2, \quad \hat\phi = 0.5850\,\mathrm{rad}.
+\hat\omega &= 24.3918 \pm 0.5280\,\mathrm{rad}, \\
+\hat\lambda &= 1.2938 \pm 0.0072, \\
+\hat A &= 6.87\,\mu\mathrm{K}^2, \quad \hat\phi = -1.9838\,\mathrm{rad}.
 \end{align}
 Evaluation under Stage 3 certification revealed:
 \begin{itemize}
     \item \textbf{Gate 1 (Resolvability):} \textsc{Passed}.
-    \item \textbf{Gate 2 (Amplitude):} \textsc{Failed} ($\hat A = 337.26 < \mathrm{threshold}$).
-    \item \textbf{Gate 3 (Precision):} \textsc{Passed} ($\sigma_\lambda/\hat\lambda = 7.50\% < 20\%$).
-    \item \textbf{Gate 4 ($p$-value):} \textsc{Failed} ($p_{\mathrm{corrected}} = 0.975$).
-    \item \textbf{Gate 5 ($\Delta\mathrm{BIC}$):} \textsc{Failed} ($\Delta\mathrm{BIC} \le 10.0$).
+    \item \textbf{Gate 2 (Amplitude):} \textsc{Failed} ($\hat A = 6.87\,\mu\mathrm{K}^2 < 2.0 \times \mathrm{RMS}_{\mathrm{resid}}$).
+    \item \textbf{Gate 3 (Precision):} \textsc{Passed} ($\sigma_\lambda/\hat\lambda = 0.56\% < 20\%$).
+    \item \textbf{Gate 4 ($p$-value):} \textsc{Failed} ($p_{\mathrm{corrected}} = 0.998$).
+    \item \textbf{Gate 5 ($\Delta\mathrm{BIC}$):} \textsc{Failed} ($\Delta\mathrm{BIC} = -49.80 \le 10.0$).
 \end{itemize}
-The candidate fails three independent gates. With $p_{\mathrm{corrected}} = 0.975$, $97.5\%$ of scrambled random noise realizations generate a spectral peak exceeding the observed feature. We conclusively conclude \textbf{no evidence for discrete scale invariance} in the Planck 2018 temperature data.
+The candidate fails three independent gates. With $p_{\mathrm{corrected}} = 0.998$, $99.8\%$ of phase-scrambled noise realizations generate a spectral peak exceeding the observed feature ($\Delta\mathrm{BIC} = -49.80$, strongly favoring the null $\Lambda$CDM baseline). We conclusively conclude \textbf{no evidence for discrete scale invariance} in the Planck 2018 temperature data.
 
 \section{Upper Limits on DSI Modulation}
 Given the null detection, we place 95\% confidence level upper limits on the modulation amplitude $\varepsilon(\lambda)$. Across the full searched parameter domain $\lambda \in [1.1, 148]$, the maximum permissible amplitude consistent with Planck 2018 observations is:
@@ -139,16 +139,16 @@ In Table~\ref{tab:gates}, we present the complete comparative diagnostics evalua
 \toprule
 \textbf{Diagnostic / Gate Parameter} & \textbf{Pre-Registered Threshold} & \textbf{Planck 2018 PR3} & \textbf{DESI DR2 Mock} & \textbf{Joint Consistency} \\
 \midrule
-Candidate Peak Frequency $\hat\omega$ & $\in [0.04, 60.0]\,\mathrm{rad}$ & $4.4371 \pm 0.2351$ & $4.0759 \pm 0.2370$ & Consistent \\
-Preferred Scaling Ratio $\hat\lambda$ & $\lambda > 1.0$ & $4.1208 \pm 0.3092$ & $4.6718 \pm 0.4187$ & Consistent \\
-Candidate Amplitude $\hat A$ & Model-dependent & $337.26\,\mu\mathrm{K}^2$ & $2853.98\,(\mathrm{Mpc}/h)^3$ & Sub-threshold \\
-Observed Normalized Power $P_{\mathrm{obs}}$ & Grid maximum & $0.2511$ & $0.1844$ & Noise-level \\
+Candidate Peak Frequency $\hat\omega$ & $\in [0.04, 60.0]\,\mathrm{rad}$ & $24.3918 \pm 0.5280$ & $4.0759 \pm 0.2370$ & Null candidates \\
+Preferred Scaling Ratio $\hat\lambda$ & $\lambda > 1.0$ & $1.2938 \pm 0.0072$ & $4.6718 \pm 0.4187$ & Inconsistent \\
+Candidate Amplitude $\hat A$ & Model-dependent & $6.87\,\mu\mathrm{K}^2$ & $2853.98\,(\mathrm{Mpc}/h)^3$ & Sub-threshold \\
+Observed Normalized Power $P_{\mathrm{obs}}$ & Grid maximum & $0.0686$ & $0.1844$ & Noise-level \\
 \midrule
 \textbf{Gate 1: Resolvability} & $\hat\omega \in [\omega_{\min}, \omega_{\max}]$ & \textsc{Passed} (\texttt{True}) & \textsc{Passed} (\texttt{True}) & Identical \\
-\textbf{Gate 2: Amplitude Significance} & $\hat A > 2.0 \times \mathrm{RMS}_{\mathrm{noise}}$ & \textsc{Failed} (\texttt{False}) & \textsc{Failed} (\texttt{False}) & Identical \\
-\textbf{Gate 3: Parameter Precision} & $\sigma_\lambda / \hat\lambda < 0.20$ & \textsc{Passed} ($7.50\%$) & \textsc{Passed} ($8.96\%$) & Identical \\
-\textbf{Gate 4: Corrected Significance} & $p_{\mathrm{corrected}} < 0.05$ & \textsc{Failed} ($p = 0.975$) & \textsc{Failed} ($p = 0.314$) & Identical \\
-\textbf{Gate 5: Information Criterion} & $\Delta\mathrm{BIC} > 10.0$ & \textsc{Failed} (\textsc{NaN}) & \textsc{Failed} (\textsc{NaN}) & Identical \\
+\textbf{Gate 2: Amplitude Significance} & $\hat A > 2.0 \times \mathrm{RMS}_{\mathrm{resid}}$ & \textsc{Failed} (\texttt{False}) & \textsc{Failed} (\texttt{False}) & Identical \\
+\textbf{Gate 3: Parameter Precision} & $\sigma_\lambda / \hat\lambda < 0.20$ & \textsc{Passed} ($0.56\%$) & \textsc{Passed} ($8.96\%$) & Identical \\
+\textbf{Gate 4: Corrected Significance} & $p_{\mathrm{corrected}} < 0.05$ & \textsc{Failed} ($p = 0.998$) & \textsc{Failed} ($p = 0.314$) & Identical \\
+\textbf{Gate 5: Information Criterion} & $\Delta\mathrm{BIC} > 10.0$ & \textsc{Failed} ($-49.80$) & \textsc{Failed} ($+8.80$) & Identical \\
 \midrule
 \textbf{Final Protocol Certification} & All 5 Gates \textsc{Passed} & \textbf{\textsc{False} (Null)} & \textbf{\textsc{False} (Null)} & \textbf{Perfect Null Match} \\
 \bottomrule

@@ -120,7 +120,7 @@ draw_centered("to Post-Quantum Agility", 685, font_sub, "#93c5fd")
 
 # 4. Scope tag
 draw_centered("A Unified 3-Stage Metrological Architecture", 780, font_tag, "#cbd5e1")
-draw_centered("Enforcing Anti-Hallucination Bounds Across 18 Orders of Scale", 830, font_tag, "#94a3b8")
+draw_centered("Enforcing Anti-Hallucination Bounds Across 45 Orders of Scale", 830, font_tag, "#94a3b8")
 
 # Decorative central emblem circle
 center_y = 1380
@@ -131,7 +131,7 @@ draw_centered("7 PAPERS · 1 FRAMEWORK", center_y - 18, font_cat, "#fbbf24")
 # 5. Author
 draw_centered("BRUNO LUÇARDO OLIVAES", 1880, font_author, "#ffffff")
 draw_centered("Independent Researcher · Brazil", 1960, font_meta, "#94a3b8")
-draw_centered("ORCID: 0009-0003-8857-7945", 2010, font_meta, "#60a5fa")
+draw_centered("ORCID: 0009-0003-5351-446X", 2010, font_meta, "#60a5fa")
 
 # 6. Bottom CERN / Zenodo Archive Box
 box_top = 2110

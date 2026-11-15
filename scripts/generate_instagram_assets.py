@@ -28,37 +28,37 @@ TEXT_WHITE = "#ffffff"
 TEXT_MUTED = "#94a3b8"
 
 # -------------------------------------------------------------------------
-# ARTE 1: Paper 7 (LHC NSBI - 9.5x mais sensível)
+# ARTE 1: Paper 7 (LHC Unbinned GL + NSBI - 29.1x mais sensível vs 20-bin)
 # -------------------------------------------------------------------------
 fig, ax = plt.subplots(figsize=(7.2, 7.2), dpi=150, facecolor=BG_DARK)
 ax.set_facecolor(BG_DARK)
 
 # Background grid lines
-for g in np.linspace(0, 1, 11):
+for g in np.linspace(0, 1.2, 13):
     ax.axhline(g, color='#1e293b', lw=0.8, alpha=0.5, zorder=1)
     ax.axvline(g, color='#1e293b', lw=0.8, alpha=0.5, zorder=1)
 
 # Bars
-methods = ['Tradicional\n(Lomb-Scargle Binned)', 'Neural SBI\n(Unbinned PyTorch)']
-limits = [0.552, 0.058]
+methods = ['Binned Poisson\n(20-bin / 40-bin)', 'Unbinned GL + NSBI\n(64-Node / PyTorch)']
+limits = [0.980, 0.0337]
 colors = ['#ef4444', '#06b6d4']
 
 bars = ax.bar([0.32, 0.68], limits, width=0.22, color=colors, edgecolor=['#f87171', '#38bdf8'], lw=2.5, zorder=3)
 
 # Bar labels
-ax.text(0.32, 0.552 + 0.03, r'$\varepsilon_{95} \leq 0.552$', ha='center', va='bottom', color='#fca5a5', fontsize=15, fontweight='bold')
-ax.text(0.68, 0.058 + 0.03, r'$\varepsilon_{95} \leq 0.058$', ha='center', va='bottom', color='#67e8f9', fontsize=15, fontweight='bold')
+ax.text(0.32, 0.980 + 0.03, r'$\varepsilon_{95} = 0.980\ (20\text{-bin})$', ha='center', va='bottom', color='#fca5a5', fontsize=12, fontweight='bold')
+ax.text(0.68, 0.0337 + 0.03, r'$\varepsilon_{95} = 0.0337\ (\text{NSBI } 0.0324)$', ha='center', va='bottom', color='#67e8f9', fontsize=12, fontweight='bold')
 
 # Multiplier callout badge
-ax.annotate('9.5x MAIS\nSENSÍVEL', xy=(0.68, 0.16), xytext=(0.50, 0.38),
+ax.annotate('29.1x MAIS\nSENSÍVEL (λ=1.10)\n(5.70x vs 40-bin)', xy=(0.68, 0.14), xytext=(0.54, 0.56),
             arrowprops=dict(arrowstyle="->", color=ACCENT_GOLD, lw=2.5, connectionstyle="arc3,rad=-0.2"),
             bbox=dict(boxstyle="round,pad=0.5", facecolor="#1e1b4b", edgecolor=ACCENT_GOLD, lw=2),
-            ha='center', va='center', color=ACCENT_GOLD, fontsize=14, fontweight='bold', zorder=4)
+            ha='center', va='center', color=ACCENT_GOLD, fontsize=12, fontweight='bold', zorder=4)
 
 ax.set_xlim(0.1, 0.9)
-ax.set_ylim(0, 0.72)
+ax.set_ylim(0, 1.18)
 ax.set_xticks([0.32, 0.68])
-ax.set_xticklabels(methods, fontsize=12, color=TEXT_WHITE, fontweight='bold')
+ax.set_xticklabels(methods, fontsize=11, color=TEXT_WHITE, fontweight='bold')
 ax.tick_params(colors=TEXT_MUTED, labelsize=11)
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
@@ -66,11 +66,11 @@ ax.spines['left'].set_color('#334155')
 ax.spines['bottom'].set_color('#334155')
 
 # Title & Subtitle inside plot
-plt.title("QUEBRANDO A BARREIRA DO ZEPTOVERSO\nLimite Superior DSI no LHC (CERN Open Data CMS)",
-          fontsize=14, color=TEXT_WHITE, fontweight='bold', pad=18)
+plt.title("QUEBRANDO A BARREIRA DO BINNING NO LHC\nVerossimilhança Não-Binada GL + NSBI (N = 17.458)",
+          fontsize=13, color=TEXT_WHITE, fontweight='bold', pad=18)
 
 # Footer note
-plt.figtext(0.5, 0.03, "Paper 7 · Inferência Não-Binada · Zero Falsos Alarmes (ΔBIC = -23.2)",
+plt.figtext(0.5, 0.03, "Paper 7 · N = 17.458 Drell-Yan Limpo · Nulo Certificado (ΔBIC = -18.15)",
             ha="center", fontsize=9, color=TEXT_MUTED, fontweight='semibold')
 
 plt.tight_layout()
@@ -138,14 +138,14 @@ ax.axhline(-1, color='#64748b', lw=1.2, ls=':', label='Constante Cosmológica (�
 
 # Degeneracy zone (low z)
 ax.axvspan(0, 0.8, color='#334155', alpha=0.35, label='Zona Degenerada (Pantheon+ / DESI Hoje)')
-# Euclid Breaking Zone
-ax.axvspan(1.2, 2.5, color='#1e3a8a', alpha=0.45, label='Janela Euclid (Quebra a ≥ 3σ)')
+# Euclid Stage-IV Fisher Window
+ax.axvspan(0.9, 1.8, color='#1e3a8a', alpha=0.45, label='Janela Euclid 7-Bin Fisher (0.9 ≤ z ≤ 1.8)')
 
-ax.annotate('PONTO DE QUEBRA EUCLID\nΔw = +0.104 detectável\n(Precisão σ_H/H ~ 1.3%)',
-            xy=(1.8, -1.22), xytext=(2.0, -0.65),
+ax.annotate('FISHER STAGE-IV EUCLID\nLimiar A_3σ(λ=3.09) = 0.231\n(Best-fit CPL vs OSC: 0.18σ)',
+            xy=(1.35, -1.18), xytext=(1.95, -0.65),
             arrowprops=dict(arrowstyle="->", color=ACCENT_GOLD, lw=2.0),
             bbox=dict(boxstyle="round,pad=0.5", facecolor="#1e1b4b", edgecolor=ACCENT_GOLD, lw=1.8),
-            ha='center', va='center', color=ACCENT_GOLD, fontsize=11, fontweight='bold')
+            ha='center', va='center', color=ACCENT_GOLD, fontsize=10, fontweight='bold')
 
 ax.set_xlim(0, 3.0)
 ax.set_ylim(-1.6, -0.4)
@@ -156,8 +156,8 @@ ax.legend(loc='lower left', facecolor='#111827', edgecolor='#374151', labelcolor
 for sp in ax.spines.values():
     sp.set_color('#334155')
 
-plt.title("ENERGIA ESCURA OSCILATÓRIA & ESA EUCLID\nA Quebra da Degenerescência Cósmica em 3 Anos",
-          fontsize=14, color=TEXT_WHITE, fontweight='bold', pad=18)
+plt.title("ENERGIA ESCURA OSCILATÓRIA & ESA EUCLID\nSolução Exata de Friedmann & Fronteira Fisher A_3σ(λ)",
+          fontsize=13, color=TEXT_WHITE, fontweight='bold', pad=18)
 
 plt.figtext(0.5, 0.03, "Paper 3 · Solução Exata de Friedmann & Matriz de Fisher · DOI: 10.5281/zenodo.24121691",
             ha="center", fontsize=9, color=TEXT_MUTED, fontweight='semibold')
@@ -208,7 +208,7 @@ if os.path.exists(cover_img_path):
         d.text(((1080 - w)//2, y), txt, font=f, fill=col)
 
     draw_c(draw4, "A MONOGRAFIA MASTER UNIFICADA", 50, f_top, "#ffffff")
-    draw_c(draw4, "The Matrioska Protocol · A Jornada Completa em 34 Páginas", 115, f_sub, "#93c5fd")
+    draw_c(draw4, "The Matrioska Protocol · A Jornada Completa em 45 Páginas", 115, f_sub, "#93c5fd")
     
     draw_c(draw4, "7 ARTIGOS · 1 ARQUITETURA METROLÓGICA", 855, f_badge, "#fbbf24")
     
@@ -223,13 +223,19 @@ if os.path.exists(cover_img_path):
 
 # Now resize & save all 4 to 1080x1080 in all destination folders
 temp_files = [
-    (temp1, "01_instagram_paper7_nsbi_9.5x.png"),
-    (temp2, "02_instagram_paper2_casimir_fantasma.png"),
-    (temp3, "03_instagram_paper3_euclid_degenerescencia.png"),
-    (temp4, "04_instagram_livro_matrioska_protocol.png")
+    (temp1, "01_instagram_paper7_unbinned_29x.png", "01_lhc_sensitivity_gain.png"),
+    (temp2, "02_instagram_paper2_casimir_fantasma.png", "02_casimir_runge_ghost.png"),
+    (temp3, "03_instagram_paper3_euclid_degenerescencia.png", "03_euclid_dark_energy.png"),
+    (temp4, "04_instagram_livro_matrioska_protocol.png", "04_monograph_showcase.png"),
 ]
 
-for src, name in temp_files:
+site_insta_dir = r"C:\Users\bruno\projects\bruno-olivaes.github.io\assets\instagram"
+for target_dir in out_dirs:
+    old_95x = os.path.join(target_dir, "01_instagram_paper7_nsbi_9.5x.png")
+    if os.path.exists(old_95x):
+        os.remove(old_95x)
+
+for src, name, alias in temp_files:
     if os.path.exists(src):
         im = Image.open(src).convert("RGB")
         im_1080 = im.resize((1080, 1080), Image.Resampling.LANCZOS)
@@ -237,6 +243,10 @@ for src, name in temp_files:
             dest = os.path.join(target_dir, name)
             im_1080.save(dest, "PNG", quality=95)
             print(f"Saved: {dest}")
+            if os.path.normpath(target_dir) == os.path.normpath(site_insta_dir):
+                alias_dest = os.path.join(target_dir, alias)
+                im_1080.save(alias_dest, "PNG", quality=95)
+                print(f"Saved alias: {alias_dest}")
         os.remove(src)
 
 print("All Instagram assets generated successfully!")

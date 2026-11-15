@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.12](https://img.shields.io/badge/Python-3.12+-green.svg)](https://www.python.org/)
 [![Planck 2018 PR3](https://img.shields.io/badge/Data-Planck%202018%20PR3-orange.svg)](https://irsa.ipac.caltech.edu/data/Planck/release_3/)
-[![Pre-Registration](https://img.shields.io/badge/Pre--Registration-OSF%20v2.1.1-purple.svg)](https://osf.io/)
+[![Pre-Registration](https://img.shields.io/badge/Pre--Registration-Git%20Tag%20v2.1.2-purple.svg)](https://github.com/bruno-olivaes/dsi-cosmo-search)
 
 Open-source scientific pipeline implementing a certified, radix-agnostic, three-stage statistical estimation protocol to search for **Discrete Scale Invariance (DSI)** in cosmological perturbation spectra.
 
@@ -20,7 +20,7 @@ Includes full validation benchmarks, false-positive protection against noise min
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Synthetic DSI ($\varepsilon = 0.05$)** | $\omega = 13.018$ | $\hat\lambda = 1.6201$ (True: $1.62$) | $p < 0.05$ | All 5 Gates \textsc{Passed} | **Recovered** (0.0085% error) |
 | **$\Lambda\mathrm{CDM}$ Noise ($N = 200$)** | Any mode | N/A | $p > 0.05$ | Failed Gates 2, 4, 5 | **Zero False Positives** (0.00%) |
-| **Planck 2018 PR3 TT Binned** | $\hat\omega = 4.4371$ | $\hat\lambda = 4.1208 \pm 0.3092$ | $p_{\mathrm{corrected}} = 0.975$ | Failed Gates 2, 4, 5 | **Null Confirmed** ($\varepsilon_{95\%} < 0.05$) |
+| **Planck 2018 PR3 TT Binned** | $\hat\omega = 24.3918$ | $\hat\lambda = 1.2938 \pm 0.0072$ | $p_{\mathrm{corrected}} = 0.998$ | Failed Gates 2, 4, 5 | **Null Confirmed** ($\varepsilon_{95\%} < 0.05$) |
 | **DESI DR2 Replication Mock** | $\hat\omega = 4.0759$ | $\hat\lambda = 4.6718 \pm 0.4187$ | $p_{\mathrm{corrected}} = 0.314$ | Failed Gates 2, 4, 5 | **Null Confirmed** |
 
 * **Zero Look-Elsewhere Fallacy:** Peak significance is corrected using a non-parametric bootstrap-of-maximum phase-scrambled surrogate ensemble ($B = 1000$ iterations).
@@ -52,7 +52,7 @@ pip install numpy scipy astropy dynesty matplotlib pytest
 Execute the automated test suite:
 ```bash
 pytest tests/ -v
-# 4 passed in ~7s
+# 5 passed in ~16s
 ```
 
 ### 3. Sanity & Calibration Checks

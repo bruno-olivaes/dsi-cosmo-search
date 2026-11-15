@@ -25,7 +25,7 @@ Discrete Scale Invariance (DSI) and associated log-periodic oscillations in prim
 In this work, we present the first fully pre-registered, radix-agnostic search for primordial DSI applied to the official Planck 2018 PR3 binned temperature power spectrum. To guarantee methodological immunity against noise-mining:
 1. To ensure strict protection against post-hoc parameter tuning and the Look-Elsewhere Effect, the complete five-gate statistical pipeline and decision thresholds were locked prior to final data evaluation via an immutable, cryptographically verifiable Git tag (`v2.1.2`) permanently archived on CERN/Zenodo (DOI: 10.5281/zenodo.24121677), coupled with SHA-256 integrity verification of the official NASA/IPAC Planck PR3 bandpowers.
 2. The empirical significance of candidate modes is evaluated against a non-parametric ensemble of 1,000 phase-scrambled surrogate datasets.
-3. The most prominent spectral candidate (hat{lambda} = 4.12 +/- 0.31) fails the amplitude and look-elsewhere gates, yielding a post-trial significance of p_corrected = 0.975, consistent with Gaussian cosmic variance.
+3. The most prominent residual candidate relative to the official Planck BestFit baseline (hat{lambda} = 1.2938 +/- 0.0072) fails the amplitude, look-elsewhere, and information-criterion gates, yielding a post-trial significance of p_corrected = 0.998 and Delta-BIC = -49.80, consistent with Gaussian cosmic variance.
 4. We establish certified 95% CL upper limits on the primordial modulation amplitude (epsilon < 0.05) across a wide scaling factor domain lambda in [1.1, 148].
 5. We replicate the protocol on synthetic Large-Scale Structure mock spectra matching the baseline precision of the Dark Energy Spectroscopic Instrument (DESI) DR2, confirming identical null behavior.
 
@@ -53,13 +53,13 @@ Zenodo DOI: 10.5281/zenodo.24121677
 ## 2. Paper 2: Review of Scientific Instruments (RSI)
 
 - **Target Journal:** *Review of Scientific Instruments* (AIP Publishing)
-- **Manuscript Title:** *Statistical Pitfalls in Casimir Force Spectroscopy: Eliminating False-Positive Periodic Signals in Sub-Micron AFM Metrology*
+- **Manuscript Title:** *Spectral Analysis of Systematic Residuals in Casimir Force Measurements: Lossless Vector Re-Audit, Statistical Pitfalls, and KPFM Patch-Potential Metrology*
 - **Subject Category:** Nanotechnology, Precision Metrology, Surface Force Instrumentation, Statistical Signal Processing
 
 ```text
 Dear Editor of Review of Scientific Instruments,
 
-We submit for your consideration the manuscript entitled "Statistical Pitfalls in Casimir Force Spectroscopy: Eliminating False-Positive Periodic Signals in Sub-Micron AFM Metrology" as an original research article in Review of Scientific Instruments.
+We submit for your consideration the manuscript entitled "Spectral Analysis of Systematic Residuals in Casimir Force Measurements: Lossless Vector Re-Audit, Statistical Pitfalls, and KPFM Patch-Potential Metrology" as an original research article in Review of Scientific Instruments.
 
 Precision measurements of quantum vacuum phenomena—such as the Casimir effect, Casimir-Polder interactions, and non-Newtonian gravity searches—rely on atomic force microscopy (AFM) and Kelvin probe force microscopy (KPFM) operating at separation distances below 1 micrometer. In recent literature, several experimental groups have reported anomalous oscillatory residuals in force-distance curves, attributing them to exotic quantum corrections or discrete scale invariance.
 
@@ -68,9 +68,9 @@ In this paper, we conduct a systematic metrological audit demonstrating that suc
 2. Natural cubic spline interpolations producing synthetic log-periodic phase undulations under non-uniform spatial sampling.
 3. Uncompensated electrostatic patch potentials in Kelvin probe measurements.
 
-We establish a rigorous, gate-certified data-processing protocol that replaces unconstrained spline and polynomial subtractions with adaptive low-order Chebyshev baselines and Generalized Lomb-Scargle periodograms coupled to Fisher-information matrices. Beyond demonstrating how polynomial detrending induces Runge boundary oscillations against $z^{-4}$ tails and how cubic splines attenuate sub-micron signals by 57%, we provide an explicit first-order Taylor expansion proof showing that experimental contact-point calibration offsets ($\delta z_0$) generate a spurious $-4 C_4 \delta z_0 z^{-5}$ term that is analytically absorbed by our physically motivated $\{1, z^{-4}, z^{-5}\}$ baseline. We submit this manuscript under the standard subscription track (zero APC).
+We establish a rigorous, gate-certified data-processing protocol that replaces unconstrained spline and polynomial subtractions with a physically motivated {1, z^-4, z^-5} inverse-power baseline and direct heteroscedastic Generalized Lomb-Scargle periodograms (Baluev FAP = 0.163; chi^2/dof = 1.14), supplemented by first-principles Speake-Trenner integration of 2D KPFM patch maps (P proportional to d^-2.29). Beyond demonstrating how polynomial detrending induces Runge boundary oscillations against $z^{-4}$ tails and how cubic splines attenuate short-wavelength ($\lambda = 7.5$ nm) signal variance by 22.6% across the full irregular scan (degrading the 90% Minimum Detectable Level by $2.27\times$), we provide an explicit first-order Taylor expansion proof showing that experimental contact-point calibration offsets ($\delta z_0$) generate a spurious $-4 C_4 \delta z_0 z^{-5}$ term that is analytically absorbed by our physical $\{1, z^{-4}, z^{-5}\}$ baseline. We submit this manuscript under the standard subscription track (zero APC).
 
-We benchmark this protocol on synthetic and experimental AFM force curves, demonstrating 100% rejection of spurious periodicities while preserving genuine sub-picoNewton physical modulations.
+We benchmark this protocol on lossless vector-extracted residuals of Decca et al. (PRL 91, 050402, 2003; N = 497 pressure and N = 288 force residuals) and raw 2D KPFM data from de Jong et al. (Nat. Phys. 2025), demonstrating complete elimination of spurious Runge/Gaussian-threshold artifacts while preserving an empirical sensitivity of MDL_90 = 0.54 sigma_F.
 
 Given RSI's leadership in physical instrumentation, experimental metrology, and the identification of experimental systematic errors, this work provides timely, actionable guidance for laboratories conducting precision surface-force measurements worldwide.
 
@@ -111,9 +111,9 @@ In this work, we conduct an extensive, reproducible benchmark comparing Harmonic
 To rigorously isolate algorithmic failure modes from time-dependent hardware calibration drift (such as transient $T_1/T_2$ fluctuations and readout instability), our benchmark employs controlled, high-fidelity Qiskit 2.x (`AerSimulator`) emulations parameterized by realistic superconducting heavy-hex transmon noise models under a strict shot budget ($N_{\mathrm{total}} = 24,000$). This controlled ablation architecture allows us to identify the exact multi-qubit spectator crosstalk threshold at which spectral/harmonic ZNE breaks down when Pauli Twirling is omitted.
 
 Our findings reveal critical operational boundaries for quantum practitioners:
-1. On 1- and 2-qubit circuits dominated by single-mode drive crosstalk, Harmonic ZNE outperforms standard polynomial extrapolation, reducing state estimation error by up to 34%.
-2. Crucially, as circuit depth and entangling layers scale to 4 qubits, multi-qubit spectator crosstalk and stochastic depolarizing noise severely wash out coherent error phases. Under these conditions, unconstrained harmonic extrapolation undergoes spectral overfitting, leading to worse ground-state fidelity estimates than unmitigated observables.
-3. In contrast, Randomized Compiling (Pauli Twirling) successfully diagonalizes the noise channel into a stochastic Pauli channel, consistently outperforming harmonic extrapolation in multi-qubit regimes.
+1. On a 1-qubit coherent Ramsey echo sequence probed across deep noise scales ($\lambda \le 17$), Harmonic ZNE outperforms standard polynomial extrapolation, reducing Mean Absolute Error (MAE) by 85.4%.
+2. Crucially, in entangled 4-qubit TFIM Trotter circuits, non-commuting coherent $ZZ$ spectator crosstalk and multi-mode interference cause harmonic ZNE to fail catastrophically (MAE surges to 2.28 at $\epsilon = 0.04$ rad vs. 0.148 unmitigated), performing significantly worse than unmitigated observables.
+3. In contrast, Randomized Compiling (Pauli Twirling) converts coherent crosstalk into stochastic Pauli channels, enabling standard linear and exponential ZNE to achieve robust error reductions of 80.8%–81.0% under identical shot budgets.
 
 We provide a diagnostic decision tree and open-source Qiskit-compatible modules allowing researchers to determine a priori whether their circuit-noise topology qualifies for harmonic ZNE.
 
@@ -139,21 +139,20 @@ Zenodo DOI: 10.5281/zenodo.24121693
 ## 4. Paper 7: Physical Review D (PRD)
 
 - **Target Journal:** *Physical Review D* (Particles, Fields, Gravitation, and Cosmology - American Physical Society)
-- **Manuscript Title:** *Breaking the Zeptouniverse Sensitivity Barrier: Neural Simulation-Based Inference for Certified Discrete Scale Invariance Searches at the LHC*
+- **Manuscript Title:** *Breaking the Binning Attenuation Barrier: Unbinned Composite Quadrature Likelihood and Neural Simulation-Based Inference for Certified DSI Searches at the LHC*
 - **Subject Category:** Particle Physics, High-Energy Experiment and Phenomenological Analysis, Machine Learning in HEP
 
 ```text
 Dear Editors of Physical Review D,
 
-We submit our manuscript entitled "Breaking the Zeptouniverse Sensitivity Barrier: Neural Simulation-Based Inference for Certified Discrete Scale Invariance Searches at the LHC" for consideration as a regular research article in Physical Review D.
+We submit our manuscript entitled "Breaking the Binning Attenuation Barrier: Unbinned Composite Quadrature Likelihood and Neural Simulation-Based Inference for Certified DSI Searches at the LHC" for consideration as a regular research article in Physical Review D.
 
-Searches for physics beyond the Standard Model at distance scales below 10^-18 m (the zeptouniverse) are increasingly limited not by collision luminosity, but by systematic statistical dilution in histogram-level analyses. When searching for subtle, continuous spectral phenomena—such as log-periodic Discrete Scale Invariance (DSI) predicted by conformal hidden sectors or quantum gravity limit cycles—traditional binned Generalized Lomb-Scargle periodograms discretize continuous invariant mass coordinates, destroying phase coherence and diluting the Fisher information metric. Consequently, classical binned searches can only constrain modulations with large signal amplitudes (epsilon > 0.30 - 0.50).
+Searches for physics beyond the Standard Model at sub-femtometer scales are increasingly limited not by collision luminosity, but by systematic statistical dilution in histogram-level analyses. When searching for subtle, continuous high-frequency spectral phenomena—such as log-periodic Discrete Scale Invariance (DSI) predicted by conformal hidden sectors or quantum gravity limit cycles—traditional binned analyses discretize continuous invariant mass coordinates, destroying phase coherence via intra-bin $\mathrm{sinc}(\omega \Delta u / 2\pi)$ destructive interference ($\omega^2 \Delta u^2 / 12$ Fisher information loss) as $\omega \Delta u$ approaches Nyquist zeros.
 
-In this paper, we demonstrate that unbinned continuous profile likelihood inference breaks this sensitivity barrier. Crucially, rather than relying on an opaque black-box classifier, our architecture formulates an explicit Unbinned Continuous Profile Likelihood normalized at every parameter step via 64-node Gauss-Legendre numerical quadrature over 62,214 CMS dimuon events. By eliminating the $\Delta u^2 / 12$ intra-bin Fisher information dilution inherent to binned Lomb-Scargle periodograms (documented in our companion baseline study, Zenodo DOI: 10.5281/zenodo.24149840), the method achieves a $9.5\times$ empirical improvement in 95% CL upper-limit sensitivity ($\varepsilon_{95} \le 0.0580$ vs. $0.5520$) while strictly preserving false-positive immunity:
-1. We construct a continuous likelihood ratio estimator p(m_mumu | theta_DSI, theta_SM) calibrated on CERN Open Data dimuon events from CMS Run 2010B.
-2. The continuous likelihood leverages exact numerical quadrature partition functions to enable unbinned profile likelihood evaluations q(epsilon) = -2 Delta ln L without histogram binning loss.
-3. In a head-to-head benchmark on identical Drell-Yan continuum collisions (m in [11, 75] GeV), the unbinned approach improves the 95% CL upper limit from epsilon_95^trad <= 0.5520 down to epsilon_95^unbinned <= 0.0580—achieving a certified 9.5x sensitivity enhancement without requiring additional beam time.
-4. Integrated into our audited five-gate certification engine, the unbinned likelihood yields a decisive Bayesian Information Criterion penalty (Delta-BIC = -23.21), preventing false-positive discoveries.
+In this paper, we demonstrate that unbinned continuous profile likelihood inference breaks this binning attenuation barrier. Crucially, rather than relying on an opaque black-box classifier, our architecture formulates an explicit Unbinned Continuous Profile Likelihood normalized at every parameter step via composite $4\times 64$-node Gauss-Legendre numerical quadrature ($256$ nodes) over all $N = 17,458$ clean Drell-Yan opposite-sign dimuon events ($m \in [11, 75]$ GeV, isolated from 62,214 total CMS Run 2010B dimuons), cross-validated by a zero-anchored PyTorch Fourier-conditioned Neural Simulation-Based Inference ratio estimator (`ConditionalDensityMLP`). Explicitly accounting for the empirical CMS barrel mass resolution measured directly from the $J/\psi$ resonance ($\sigma_u^{\mathrm{barrel}} = 0.0120$, $73.1\%$ signal survival at $\lambda = 1.10$):
+1. We separate the slow-modulation equivalence regime ($\lambda \ge 1.50$, where unbinned and 40–60-bin Poisson likelihoods match within $1\text{--}5\%$) from the high-frequency binning collapse regime ($\lambda \in [1.05, 1.25]$, $\omega \in [28.16, 128.78]$ rad).
+2. At $\lambda = 1.10$ ($\omega = 65.92$ rad), the unbinned Composite-GL likelihood achieves a 95% CL upper limit of $\varepsilon_{95} = 0.0337$ ($\varepsilon_{95}^{\mathrm{neural}} = 0.0324$), outperforming 20-bin ($0.9800$, $29.1\times$ loss), 40-bin ($0.1924$, $5.7\times$ loss), and 60-bin ($0.0512$, $1.52\times$ loss) Poisson searches documented relative to our companion baseline study (Zenodo DOI: 10.5281/zenodo.24149840).
+3. Integrated into our audited five-gate certification engine, the unbinned likelihood yields a decisive Bayesian Information Criterion penalty ($\Delta\mathrm{BIC} = -18.15$, $p_{\mathrm{corrected}} = 0.4500$ at $\lambda = 1.10$), preventing false-positive discoveries across all tested scales.
 
 This work bridges advanced continuous likelihood estimation with rigorous experimental metrology in collider physics. Because PRD is the premier venue for high-energy physics phenomenology, collider search methodology, and statistical methods in HEP, we believe this manuscript will be of broad interest to your readership.
 

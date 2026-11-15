@@ -4,25 +4,26 @@ Modelos de posts prontos para **LinkedIn** e **X (Twitter)** cobrindo todos os 8
 
 ---
 
-## 🌟 Paper 7: Neural Simulation-Based Inference (NSBI) no LHC (DESTAQUE MÁXIMO)
+## 🌟 Paper 7: Verossimilhança Não-Binada & NSBI no LHC (DESTAQUE MÁXIMO)
 
-### 🐦 X (Twitter) [255 caracteres]
-🚀 9.5x mais sensibilidade no LHC sem aceleradores novos!
-Aplicamos Neural Simulation-Based Inference (NSBI) com PyTorch nos dados abertos do CMS/CERN. O limite superior caiu de 0.552 para 0.0580.
-Código & Paper: https://doi.org/10.5281/zenodo.24124702
-#MachineLearning #Physics #LHC #AI
+### 🐦 X (Twitter) [260 caracteres]
+🚀 Até 29.1x mais sensibilidade no LHC vs. 20 bins (5.7x vs. 40 bins) em λ=1.10 sem aceleradores novos!
+Aplicamos Verossimilhança Não-Binada (4×64 GL) + NSBI PyTorch nos Drell-Yan do CMS/CERN (ε₉₅ = 0.0337; ΔBIC = -18.15).
+DOI: https://doi.org/10.5281/zenodo.24149842
+#MachineLearning #Physics #LHC #CERN
 
 ### 💼 LinkedIn
-🚀 **Quebrando a Barreira do Zeptoverso: 9.5x Mais Sensibilidade no LHC com Redes Neurais**
+🚀 **Quebrando a Barreira do Binning no LHC: Até 29,1x Mais Sensibilidade com Verossimilhança Não-Binada e NSBI**
 
-Quando buscamos física além do Modelo Padrão em escalas subatômicas (<10⁻¹⁸ m), a perda de resolução por binning em histogramas clássicos é um gargalo severo.
+Quando buscamos modulações log-periódicas finas em espectros do LHC, agrupar colisões em histogramas impõe atenuação analítica $\mathrm{sinc}(\omega \Delta u / 2\pi)$ — destruindo a coerência próxima aos zeros de Nyquist.
 
-No nosso novo trabalho (Paper 7), implementamos **Neural Simulation-Based Inference (NSBI)** não-binada com PyTorch treinada em colisões dimuon reais do CMS (CERN Open Data):
-🔹 **Ganho de Sensibilidade:** O limite superior de modulação caiu de $\varepsilon \le 0.5520$ para $\varepsilon \le 0.0580$ — um aumento empírico de **9.5 vezes** em sensibilidade estatística.
-🔹 **Metrologia Blindada:** O protocolo de 5 portões confirmou o resultado nulo ($\Delta\text{BIC} = -23.21$), provando que a rede neural não alucina falsos positivos.
+No Paper 7, combinamos uma **Verossimilhança de Perfil Contínua Não-Binada** (quadratura composta $4\times 64$ nós de Gauss-Legendre) com um estimador amortizado de **NSBI em PyTorch (`ConditionalDensityMLP`)**, aplicados sobre todos os $N = 17.458$ eventos limpos de Drell-Yan do CMS Run 2010B incorporando a resolução empírica do barril ($\sigma_u = 0,0120$; $73,1\%$ de sobrevivência em $\lambda = 1,10$):
+🔹 **Ganho em Alta Frequência:** O limite a 95% CL atingiu $\varepsilon_{95} = 0,0337$ ($\varepsilon_{95}^{\text{neural}} = 0,0324$) em $\lambda = 1,10$, superando em **29,1x** a busca Poisson com 20 bins ($0,9800$) e em **5,7x** com 40 bins ($0,1924$).
+🔹 **Metrologia Blindada:** O protocolo de 5 portões confirmou o resultado nulo ($p_{\text{corrigido}} = 0,4500$; $\Delta\text{BIC} = -18,15$), provando imunidade total contra falsos alarmes.
 
 Tudo 100% aberto e reprodutível:
-📄 Artigo e Código: https://github.com/bruno-olivaes/lhc-nsbi-dsi
+📄 DOI Paper 7: https://doi.org/10.5281/zenodo.24149842
+💻 Artigo e Código: https://github.com/bruno-olivaes/lhc-nsbi-dsi
 🏛️ Monografia Unificada: https://doi.org/10.5281/zenodo.24124702
 
 #MachineLearning #HighEnergyPhysics #CERN #DeepLearning #OpenScience #DataScience #Physics
@@ -31,8 +32,8 @@ Tudo 100% aberto e reprodutível:
 
 ## 🌌 Paper 1: Cosmologia Observacional (Planck 2018 DSI)
 
-### 🐦 X (Twitter) [268 caracteres]
-Testamos a Invariância Discreta de Escala (DSI) na CMB do satélite Planck 2018 com protocolo pré-registrado e 5 portões de integridade. Resultado nulo certificado: p = 0.975 e ε < 0.05.
+### 🐦 X (Twitter) [264 caracteres]
+Testamos a Invariância Discreta de Escala (DSI) na CMB do satélite Planck 2018 com protocolo pré-registrado (v2.1.2) e 5 portões de integridade. Resultado nulo certificado: p = 0.998, ΔBIC = -49.80 e ε < 0.05.
 Paper & DOI: https://doi.org/10.5281/zenodo.24121677
 #Cosmology #Physics #OpenScience #Planck
 
@@ -41,10 +42,10 @@ Paper & DOI: https://doi.org/10.5281/zenodo.24121677
 
 Assinaturas log-periódicas no início do universo são previstas por modelos de inflação não-padrão. Mas como evitar o viés de garimpo de ruído (*look-elsewhere effect*)?
 
-No Paper 1, desenvolvemos um protocolo pré-registrado de 3 estágios com 5 portões matemáticos de integridade aplicado aos dados oficiais do satélite Planck 2018 PR3:
+No Paper 1, desenvolvemos um protocolo pré-registrado no Git (tag `v2.1.2`) de 3 estágios com 5 portões matemáticos de integridade aplicado aos resíduos sobre o espectro oficial `BestFit` $\Lambda$CDM do Planck 2018 PR3 ($N=83$ multipolos, SHA-256 verificado):
 ✅ 1.000 simulações bootstrap com fase embaralhada.
-✅ Candidato principal com $p_{\text{corrigido}} = 0.975$ (resultado nulo robusto).
-✅ Limite superior primordial certificado: $\varepsilon_{95\%} < 0.05$.
+✅ Candidato residual principal ($\hat{\lambda} = 1,2938 \pm 0,0072$) com $p_{\text{corrigido}} = 0,998$ e $\Delta\text{BIC} = -49,80$ (resultado nulo robusto).
+✅ Limite superior primordial certificado: $\varepsilon_{95\%} < 0,05$ em $\lambda \in [1,1; 148]$.
 
 A ciência avança quando eliminamos falsos positivos com rigor metrológico.
 
@@ -58,7 +59,7 @@ A ciência avança quando eliminamos falsos positivos com rigor metrológico.
 ## 🔬 Paper 2: Efeito Casimir & Metrologia AFM
 
 ### 🐦 X (Twitter) [264 caracteres]
-Cuidado com splines e polinômios em forças de superfície! Mostramos como o Fenômeno de Runge gera falsos periódicos na força de Casimir e propomos metrologia blindada para AFM sub-mícron.
+Cuidado com splines e polinômios em forças de superfície! Mostramos como o Fenômeno de Runge gera falsos periódicos na força de Casimir (583.5 nm) e propomos base física {1, z⁻⁴, z⁻⁵} + GLS direto.
 DOI: https://doi.org/10.5281/zenodo.24121687
 #Nanotechnology #Metrology #Physics #AFM
 
@@ -67,9 +68,9 @@ DOI: https://doi.org/10.5281/zenodo.24121687
 
 Em medidas de força de Casimir e gravidade em escala sub-micrométrica, oscilações residuais têm sido frequentemente interpretadas como física exótica.
 
-No Paper 2, demonstramos metrologicamente que tais oscilações decorrem do **Fenômeno de Runge** em polinômios de alta ordem e de distorções de fase em splines cúbicas sob amostragem não-uniforme.
+No Paper 2, analisamos $N = 497$ resíduos de pressão dinâmica e $N = 288$ resíduos de força estática extraídos vetorialmente sem perdas de Decca et al. (PRL 2003), além de mapas KPFM 2D de de Jong et al. (Nat. Phys. 2025). Demonstramos que oscilações aparentes ($\lambda = 583,5\text{ nm}$, $\text{FAP} = 1,49\times 10^{-45}$) decorrem do **Fenômeno de Runge** em polinômios cúbicos sobre caudas $z^{-4}$, enquanto a reamostragem por splines atenua $22,6\%$ da variância em $\lambda = 7,5\text{ nm}$ (degradando $\text{MDL}_{90}$ em $2,27\times$).
 
-Proponho um protocolo de ajuste por polinômios de Chebyshev ortogonais e periodogramas Generalized Lomb-Scargle, garantindo 100% de imunidade a artefatos numéricos sem mascarar sinais reais.
+Ao adotar a base física $\{1, z^{-4}, z^{-5}\}$ — que absorve analiticamente desvios lineares de ponto de contato ($-4 C_4 \delta z_0 z^{-5}$) — e periodogramas Generalized Lomb-Scargle diretos, $\chi^2/\text{dof}$ cai para $1,14$ ($\text{FAP} = 0,163$), restaurando o ruído branco instrumental.
 
 📄 DOI Zenodo: https://doi.org/10.5281/zenodo.24121687
 💻 Repositório: https://github.com/bruno-olivaes/casimir-afm-spectroscopy
@@ -80,20 +81,19 @@ Proponho um protocolo de ajuste por polinômios de Chebyshev ortogonais e period
 
 ## 🔭 Paper 3: Energia Escura Oscilatória & ESA Euclid
 
-### 🐦 X (Twitter) [262 caracteres]
-A missão ESA Euclid pode quebrar a degenerescência da Energia Escura dinâmica? Resolvemos as equações de Friedmann analiticamente e apresentamos o forecast para o Euclid.
+### 🐦 X (Twitter) [267 caracteres]
+Onde o ESA Euclid quebra a degenerescência da Energia Escura oscilatória? Resolvemos a continuidade exata e calculamos a matriz de Fisher Stage-IV sobre Pantheon+ full-cov + DESI + Planck CMB.
 DOI: https://doi.org/10.5281/zenodo.24121691
-#Cosmology #DarkEnergy #Euclid #ESA #Astrophysics
+#Cosmology #DarkEnergy #Euclid #ESA
 
 ### 💼 LinkedIn
 🔭 **Prevendo Energia Escura Log-Oscilatória com o Telescópio Espacial ESA Euclid**
 
 A tensão de Hubble ($H_0$) e anomalias cosmológicas motivam modelos de Energia Escura dinâmica além da constante cosmológica $\Lambda$.
 
-No Paper 3:
-🔹 Obtemos a solução analítica exata das equações de Friedmann com potencial escalar oscilatório.
-🔹 Demonstramos que levantamentos atuais (DESI / SNIa) sofrem de degenerescência paramétrica.
-🔹 Apresentamos a matriz de Fisher que prova como a precisão espectroscópica e de lentes gravitacionais da missão ESA Euclid quebrará essa degenerescência a $3\sigma$.
+No Paper 3 ($w(a) = -1 + A \sin((2\pi/\lambda)\ln a + \phi_0)$):
+🔹 Obtemos a solução analítica exata de $\rho_{\mathrm{DE}}(z)$ com a matriz de covariância completa $1580\times 1580$ do Pantheon+ + DESI BAO + Planck CMB ($\Delta\chi^2 = -3,90$, $\Delta\text{BIC} = +18,22$).
+🔹 Quantificamos via matriz de Fisher Stage-IV ($\sigma_H/H = 1,3\%$) que $H(z)$ isolado do Euclid separa os melhores ajustes atuais em apenas $0,103\%$ ($0,18\sigma$), porém com prior $\sigma_{\Omega_m} = 0,007$ atinge sensibilidade $3\sigma$ de $A_{3\sigma} \approx 0,15\text{--}0,29$ para $\lambda \in [1,5; 10]$ — motivando sinergia multi-sonda (lenteamento fraco, $D_M$ e Ly-$\alpha$ BAO).
 
 📄 DOI Zenodo: https://doi.org/10.5281/zenodo.24121691
 💻 Repositório: https://github.com/bruno-olivaes/oscillatory-dark-energy-euclid
@@ -104,20 +104,20 @@ No Paper 3:
 
 ## ⚛️ Paper 4: Computação Quântica & Mitigação de Ruído (ZNE)
 
-### 🐦 X (Twitter) [268 caracteres]
-Quando a extrapolação harmônica falha em processadores quânticos? Benchmarking empírico de ZNE e Pauli Twirling em qubits transmon da IBM no Qiskit.
+### 🐦 X (Twitter) [264 caracteres]
+Quando a extrapolação harmônica falha em qubits NISQ? Benchmark via emulação Qiskit 2.x AerSimulator (ruído heavy-hex, 24k tiros): 85.4% em 1Q, falha em 4Q (MAE=2.28) vs. 80.8–81.0% com Pauli Twirling.
 DOI: https://doi.org/10.5281/zenodo.24121693
-#QuantumComputing #Qiskit #IBMQuantum #Physics #ErrorMitigation
+#QuantumComputing #Qiskit #NISQ #QEM
 
 ### 💼 LinkedIn
-⚛️ **Quando o ZNE Harmônico Falha: Benchmarking de Mitigação de Erros em Qubits Transmon da IBM**
+⚛️ **Quando o ZNE Harmônico Falha: Benchmarking de Mitigação de Erros sob Modelos Transmon Heavy-Hex**
 
 A mitigação de erros quânticos (Zero-Noise Extrapolation - ZNE) é essencial na era NISQ. Mas será que extrapolações espectrais harmônicas sempre funcionam?
 
-No Paper 4, realizamos um benchmarking empírico com o Qiskit em processadores IBM Quantum:
-🔹 Em 1 e 2 qubits, o ZNE Harmônico via Lomb-Scargle reduz o erro de estado em até 34%.
-🔹 A 4 qubits, crosstalk de espectadores e ruído despolarizante estocástico causam *overfitting* espectral.
-🔹 O Pauli Twirling (Randomized Compiling) se mostrou indispensável para diagonalizar o canal de ruído em circuitos multi-qubit.
+No Paper 4, realizamos um benchmark pré-registrado via emulações de alta fidelidade no Qiskit 2.x (`AerSimulator`) calibradas com modelos de ruído *heavy-hex* de transmons supercondutores ($24.000$ tiros/semente):
+🔹 Em 1 qubit (Ramsey echo coerente, $\lambda \le 17$), o ZNE Harmônico via Lomb-Scargle reduz o MAE em **85,4%**.
+🔹 Em 4 qubits (Trotter TFIM), crosstalk não-comutativo $ZZ$ e interferência multimodal causam falha catastrófica do HZNE ($\text{MAE} = 2,28$ em $\epsilon = 0,04\text{ rad}$ vs. $0,148$ sem mitigação).
+🔹 O **Pauli Twirling** (Randomized Compiling) converte crosstalk coerente em canais estocásticos, permitindo reduções de erro de **80,8%–81,0%** com ZNE linear e exponencial.
 
 Fornecemos uma árvore de decisão diagnóstica para desenvolvedores quânticos.
 
@@ -140,8 +140,8 @@ DOI: https://doi.org/10.5281/zenodo.24121695
 
 A migração para a criptografia resistente a computadores quânticos é urgente, mas quais são os gargalos de infraestrutura?
 
-No Paper 5, realizamos um benchmark pacote a pacote comparando o padrão NIST FIPS 203 (ML-KEM / Kyber-768) e KEMs híbridos contra RSA-3072 e ECDH X25519:
-⚠️ Chaves públicas maiores (1.184 bytes) e cifras (1.088 bytes) forçam o `ClientHello` e `ServerHello` além do MTU padrão de 1.500 bytes.
+No Paper 5, realizamos uma auditoria determinística de transporte de socket e modelagem exata da fronteira MTU de 1.500 B (MSS 1.460 B) comparando o padrão NIST FIPS 203 (ML-KEM / Kyber-768) e KEMs híbridos contra RSA-3072 e ECDH X25519:
+⚠️ Chaves públicas maiores (1.184 bytes) e cifras (1.088 bytes) forçam o `ClientHello` híbrido (`1.518 B`) além do MSS de 1.460 B (MTU de 1.500 bytes), gerando fragmentação em 2 segmentos TCP.
 ⚠️ A fragmentação TCP eleva a latência em conexões de alta perda de pacotes e redes móveis.
 ✅ Apresentamos estratégias de cripto-agilidade para mitigar esse impacto sem comprometer a segurança.
 
@@ -155,8 +155,8 @@ No Paper 5, realizamos um benchmark pacote a pacote comparando o padrão NIST FI
 ## 💥 Paper 6: Busca de DSI em Dados Abertos do LHC (CMS)
 
 ### 🐦 X (Twitter) [268 caracteres]
-Aplicamos o protocolo de 5 portões a 62.214 colisões dimuon do CMS no LHC (CERN Open Data). Resultado nulo certificado (p = 0.324) e sem universalidade com a cosmologia do Planck.
-GitHub: https://github.com/bruno-olivaes/lhc-dsi-search
+Aplicamos o protocolo de 5 portões a 62.214 colisões dimuon do CMS no LHC (CERN Open Data). Resultado nulo certificado (p = 0.3240 na janela limpa; ΔBIC = +238.8) e sem universalidade com o Planck.
+DOI: https://doi.org/10.5281/zenodo.24149840
 #ParticlePhysics #LHC #CERN #DataScience
 
 ### 💼 LinkedIn
@@ -165,13 +165,14 @@ GitHub: https://github.com/bruno-olivaes/lhc-dsi-search
 Existe uma constante de escala geométrica universal que conecta colisores de partículas e o cosmos primordial?
 
 No Paper 6, adaptamos o protocolo de metrologia de 3 estágios para analisar 62.214 eventos físicos de dimuons ($\mu^+\mu^-$) do experimento CMS ($\sqrt{s} = 7\,\text{TeV}$, CERN Open Data):
-❌ No contínuo limpo Drell-Yan ($11\text{--}75\,\text{GeV}$), o candidato em $\hat{\lambda} = 2.902$ falha nos portões de amplitude e bootstrap ($p = 0.324$).
-❌ No espectro amplo ($2\text{--}110\,\text{GeV}$), ressonâncias conhecidas ($J/\psi, \Upsilon, Z$) não formam uma escada geométrica log-periódica.
-❌ Zero correlação com o candidato cosmológico do Planck ($\lambda \approx 4.12$).
+❌ No contínuo limpo Drell-Yan ($11\text{--}75\,\text{GeV}$, $N = 17.458$), o candidato em $\hat{\lambda} = 2.902 \pm 0.075$ falha nos portões de amplitude ($A = 2.15 < 2.87$) e bootstrap ($p = 0.3240$; $\Delta\text{BIC} = +238.82$).
+❌ No espectro amplo ($2\text{--}110\,\text{GeV}$), ressonâncias conhecidas ($J/\psi, \Upsilon, Z$) também falham no Portão 2 de amplitude ($A = 7.83 < 13.49$) e não formam uma escada geométrica contínua.
+❌ Zero correlação com o candidato cosmológico do Planck ($\lambda = 1.2938 \pm 0.0072$).
 
-Eliminamos especulações com metrologia reprodutiva.
+Eliminamos especulações com metrologia reprodutível.
 
-📄 Repositório & Artigo: https://github.com/bruno-olivaes/lhc-dsi-search
+📄 DOI Zenodo: https://doi.org/10.5281/zenodo.24149840
+💻 Repositório & Artigo: https://github.com/bruno-olivaes/lhc-dsi-search
 🏛️ Monografia: https://doi.org/10.5281/zenodo.24124702
 
 #ParticlePhysics #HighEnergyPhysics #CERN #CMSExperiment #LHC #OpenData
@@ -180,24 +181,24 @@ Eliminamos especulações com metrologia reprodutiva.
 
 ## 🏛️ Monografia Master Unificada (*The Matrioska Protocol*)
 
-### 🐦 X (Twitter) [269 caracteres]
-Da cosmologia primordial à criptografia pós-quântica: publiquei a monografia master unificada de 34 páginas integrando 7 artigos científicos sob um único protocolo metrológico.
+### 🐦 X (Twitter) [267 caracteres]
+Da cosmologia primordial à criptografia pós-quântica: publiquei a monografia master unificada de 45 páginas (7 capítulos) integrando 7 artigos científicos sob um único protocolo metrológico.
 DOI CERN/Zenodo: https://doi.org/10.5281/zenodo.24124702
-#Physics #OpenScience #Quantum #AI
+#Physics #OpenScience #Quantum
 
 ### 💼 LinkedIn
 🏛️ **The Matrioska Protocol: Da Invariância de Escala Primordial à Criptografia Pós-Quântica**
 
-Tenho a satisfação de disponibilizar a **Monografia Master Unificada** (34 páginas), sintetizando um programa de pesquisa interdisciplinar que conecta física fundamental, inteligência artificial e segurança computacional:
+Tenho a satisfação de disponibilizar a **Monografia Master Unificada** (45 páginas, 7 capítulos), sintetizando um programa de pesquisa interdisciplinar que conecta física fundamental, inteligência artificial e segurança computacional:
 
 Consolidando 7 artigos de pesquisa:
 1️⃣ Cosmologia Observacional (Planck 2018 CMB)
 2️⃣ Espectroscopia de Força de Casimir & Metrologia AFM
 3️⃣ Energia Escura Oscilatória & ESA Euclid
-4️⃣ Mitigação de Erro Quântico (ZNE) em Qubits Transmon da IBM
-5️⃣ Criptografia Pós-Quântica no TLS 1.3 (NIST FIPS 203)
+4️⃣ Mitigação de Erro Quântico (ZNE) via Emulação Qiskit 2.x *Heavy-Hex*
+5️⃣ Criptografia Pós-Quântica no TLS 1.3 (NIST FIPS 203 & Fronteira MTU 1.500 B)
 6️⃣ Busca de DSI em Espectros de Massa do LHC (CMS Open Data)
-7️⃣ Inferência Baseada em Simulação Neural (NSBI com sensibilidade 9.5x)
+7️⃣ Verossimilhança Não-Binada ($4\times 64$ GL) & NSBI com ganho de até 29,1x vs. 20 bins no LHC
 
 Organizado formalmente sob a Classificação Decimal de Dewey (CDD 500 $\to$ 530 $\to$ 006) e arquivado permanentemente no CERN / Zenodo:
 

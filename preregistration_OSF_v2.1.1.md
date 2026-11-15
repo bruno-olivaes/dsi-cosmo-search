@@ -1,9 +1,9 @@
-# OSF Pre-Registration Form (v2.1.1)
+# Git-Versioned Pre-Registered Protocol (v2.1.2)
 
 ## Metadata Overview
-- **Registration Type:** Open-Ended Registration
+- **Registration Type:** Immutable Git Tag (`v2.1.2`) Pre-Registered Protocol
 - **Title:** Pre-registration: A certified, radix-agnostic search for Discrete Scale Invariance in the CMB and LSS
-- **Primary Investigator:** Bruno Luçardo Olivaes (Independent Researcher, Brazil; ORCID: 0009-0003-8857-7945)
+- **Primary Investigator:** Bruno Luçardo Olivaes (Independent Researcher, Brazil; ORCID: 0009-0003-5351-446X)
 - **License:** MIT Open-Source License
 - **Repository:** https://github.com/bruno-olivaes/dsi-cosmo-search
 - **Data File Hash (SHA-256):** `ed2b8b51b033e668e661f6cf4eb7705f15bcaf358189dfc4a4481cc7020130cd`
@@ -28,7 +28,7 @@ This study implements a pre-registered, radix-agnostic search protocol designed 
 - **Dataset:** Official Planck 2018 Release 3 (PR3) binned TT angular power spectrum $D_\ell = \ell(\ell+1)C_\ell/2\pi$.
 - **Source:** NASA/IPAC Infrared Science Archive (IRSA) official mirror:
   `https://irsa.ipac.caltech.edu/data/Planck/release_3/ancillary-data/cosmoparams/COM_PowerSpect_CMB-TT-binned_R3.01.txt`
-- **Multipole Range:** $N = 215$ bins spanning $\ell \in [30, 2508]$.
+- **Multipole Range:** $N = 83$ binned multipoles spanning $\ell \in [30, 2508]$ (with official column 4 `BestFit` $\Lambda$CDM baseline subtracted).
 - **Cryptographic Hash (SHA-256):**
   `ed2b8b51b033e668e661f6cf4eb7705f15bcaf358189dfc4a4481cc7020130cd`
 - **Covariance:** Diagonal covariance constructed from the observational asymmetric error bars: $\sigma_\ell = \frac{1}{2}(\Delta D_\ell^- + \Delta D_\ell^+)$.

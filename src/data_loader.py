@@ -24,7 +24,7 @@ def verify_manifest(manifest_path, data_dir):
             raise ValueError(f"Hash mismatch {fname}")
     print("All hashes verified.")
 
-def load_planck_tt(data_dir, binning='binned'):
+def load_planck_tt(data_dir, binning='binned', return_bestfit=False):
     """Carrega espectro TT binned e constrói covariância diagonal."""
     data_dir = Path(data_dir)
     spec = data_dir / f'COM_PowerSpect_CMB-TT-{binning}_R3.01.txt'
@@ -36,8 +36,11 @@ def load_planck_tt(data_dir, binning='binned'):
     Dl = data[:, 1]
     dDl_minus = data[:, 2]
     dDl_plus = data[:, 3]
+    bestfit = data[:, 4]
     # Incerteza simétrica média
     sigma_l = 0.5 * (dDl_minus + dDl_plus)
     cov = np.diag(sigma_l ** 2)
+    if return_bestfit:
+        return ell, Dl, cov, bestfit
     return ell, Dl, cov
 

@@ -20,9 +20,9 @@ I am writing to share two recent open-source studies where we adapted pre-regist
    (Preprint & Code: https://github.com/bruno-olivaes/lhc-dsi-search)
    We audited 62,214 physical mu+ mu- events from CMS Run 2010B using a 5-gate protocol, establishing certified null results (p = 0.324 in the clean Drell-Yan continuum) and constraining spurious log-periodic artifacts.
 
-2. "Breaking the Zeptouniverse Sensitivity Barrier: Neural Simulation-Based Inference for Certified DSI Searches at the LHC"
+2. "Breaking the Binning Attenuation Barrier: Unbinned Composite Quadrature Likelihood and Neural Simulation-Based Inference for Certified DSI Searches at the LHC"
    (Preprint & Code: https://github.com/bruno-olivaes/lhc-nsbi-dsi)
-   By training an unbinned conditional neural likelihood ratio estimator q_psi(m_mumu | theta) with continuous Gauss-Legendre quadrature normalization, we observed an empirical 9.5x sensitivity enhancement (deepening the 95% CL upper limit from epsilon <= 0.552 to epsilon <= 0.0580) over binned Lomb-Scargle techniques, while maintaining strict Delta-BIC false-alarm protection.
+   Evaluating N = 17,458 clean Drell-Yan events (m in [11, 75] GeV) from CMS Run 2010B with an unbinned Continuous Profile Likelihood (composite 4x64-node Gauss-Legendre quadrature) cross-validated against a PyTorch Fourier-conditioned likelihood-ratio estimator (ConditionalDensityMLP) and empirical J/psi barrel mass resolution (sigma_u = 0.0120, 73.1% signal survival at lambda = 1.10), we achieve eps_95 = 0.0337 (neural: 0.0324), outperforming 20-bin (0.9800; 29.1x loss) and 40-bin (0.1924; 5.7x loss) Poisson searches while certifying a clean null result (p_corrected = 0.4500, Delta-BIC = -18.15).
 
 Given your leadership in precision dimuon physics and resonance searches, I would be delighted to discuss whether this unbinned neural likelihood framework could be of interest or utility for full-luminosity CMS Run 2 or Run 3 datasets.
 
@@ -35,7 +35,7 @@ Best regards,
 Bruno Luçardo Olivaes
 Independent Researcher, Brazil
 Email: brunoolivaes@gmail.com
-ORCID: 0009-0003-8857-7945
+ORCID: 0009-0003-5351-446X
 Portfolio Master DOI: 10.5281/zenodo.24124702
 ```
 
@@ -44,22 +44,22 @@ Portfolio Master DOI: 10.5281/zenodo.24124702
 ## 2. Para a Equipe de Engenharia do Qiskit (IBM Quantum)
 
 **Destinatário:** Mantenedores do Qiskit / Mitiq / IBM Quantum Community (`qiskit@ibm.com` ou canais do Slack/GitHub do Qiskit).  
-**Assunto:** Open-source benchmark of Harmonic ZNE vs Pauli Twirling across 1-4 qubits on IBM Quantum hardware
+**Subject:** Open-source Qiskit 2.x (AerSimulator) benchmark of Harmonic ZNE vs Pauli Twirling across 1- and 4-qubit heavy-hex transmon noise models
 
 ```text
 Dear Qiskit Development and Quantum Error Mitigation Team,
 
 I hope you are doing well.
 
-I am reaching out to share the results of our empirical benchmark on Quantum Error Mitigation (QEM) models implemented with Qiskit 2.x and executed on IBM Quantum transmon architectures:
+I am reaching out to share the results of our empirical benchmark on Quantum Error Mitigation (QEM) models implemented with Qiskit 2.x and evaluated via high-fidelity AerSimulator emulations calibrated with heavy-hex superconducting transmon noise models (matched shot budget N_total = 24,000 shots per seed):
 
-"When Harmonic ZNE Fails: A Comparative Benchmark of Error Mitigation on Superconducting NISQ Processors"
+"When Harmonic ZNE Fails: A Comparative Benchmark of Error Mitigation on NISQ Devices"
 - Paper & Zenodo DOI: https://doi.org/10.5281/zenodo.24121693
 - Repository & Notebooks: https://github.com/bruno-olivaes/qiskit-lombscargle-zne
 
 Key Benchmark Findings:
-1. In 1- and 2-qubit circuits dominated by single-mode drive crosstalk, Harmonic Zero-Noise Extrapolation (HZNE via Lomb-Scargle spectral decoupling) outperforms standard polynomial fits, yielding up to a 34% reduction in state estimation error.
-2. At 4 qubits, multi-qubit spectator crosstalk and stochastic depolarizing noise wash out coherent phases. Under these conditions, unconstrained harmonic extrapolation suffers from spectral overfitting, whereas Randomized Compiling (Pauli Twirling) consistently preserves physical fidelity.
+1. In a 1-qubit coherent Ramsey sequence probed across deep noise scales (lambda <= 17), Harmonic Zero-Noise Extrapolation (HZNE via Lomb-Scargle spectral decoupling) achieves an 85.4% reduction in Mean Absolute Error (MAE), overcoming sign inversions where polynomial and exponential models diverge.
+2. In entangled 4-qubit TFIM Trotter circuits, multi-qubit non-commuting coherent ZZ crosstalk causes harmonic ZNE to fail catastrophically (MAE surges to 2.28 at epsilon = 0.04 rad vs. 0.148 unmitigated), whereas Randomized Compiling (Pauli Twirling) converts coherent crosstalk into stochastic Pauli channels, enabling linear and exponential ZNE to achieve 80.8%-81.0% error reduction under identical shot budgets.
 
 We have structured the codebase with a clear diagnostic decision tree and modular classes compatible with Qiskit Runtime Primitives (`EstimatorV2`). If there is interest from the Qiskit or Mitiq teams, I would be delighted to contribute these diagnostic modules or benchmark tutorials upstream to the community ecosystem.
 
@@ -70,7 +70,7 @@ Best regards,
 Bruno Luçardo Olivaes
 Independent Researcher, Brazil
 Email: brunoolivaes@gmail.com
-ORCID: 0009-0003-8857-7945
+ORCID: 0009-0003-5351-446X
 GitHub: https://github.com/bruno-olivaes
 ```
 
@@ -92,9 +92,9 @@ I am preparing to submit our pre-registered manuscript to the arXiv under the ca
 
 The manuscript details:
 - Title: "Constraints on Primordial Discrete Scale Invariance from the Planck 2018 Temperature Power Spectrum" [or another paper title]
-- Pre-Registration (OSF): Open-source, certified 3-stage protocol with 5 integrity gates.
-- Dataset: Official Planck 2018 PR3 binned TT power spectrum (NASA/IPAC).
-- Primary Result: Certified null result (p_corrected = 0.975; epsilon_95 < 0.05) using non-parametric phase-scrambled bootstrap surrogates to prevent look-elsewhere bias.
+- Pre-Registration (Git tag v2.1.2): Open-source, certified 3-stage protocol with 5 integrity gates archived permanently on CERN/Zenodo.
+- Dataset: Official Planck 2018 PR3 binned TT power spectrum (NASA/IPAC, N = 83 binned multipoles minus BestFit Lambda-CDM, SHA-256 verified).
+- Primary Result: Certified null result (candidate lambda_hat = 1.2938 +/- 0.0072, p_corrected = 0.998, Delta-BIC = -49.80; epsilon_95 < 0.05 across lambda in [1.1, 148]) using non-parametric phase-scrambled bootstrap surrogates to prevent look-elsewhere bias.
 - Full PDF & Source Code: Permanently archived with official CERN/Zenodo DOI:
   https://doi.org/10.5281/zenodo.24121677
   GitHub: https://github.com/bruno-olivaes/dsi-cosmo-search
@@ -113,7 +113,7 @@ Sincerely,
 Bruno Luçardo Olivaes
 Independent Researcher, Brazil
 Email: brunoolivaes@gmail.com
-ORCID: 0009-0003-8857-7945
+ORCID: 0009-0003-5351-446X
 Unified Monograph DOI: 10.5281/zenodo.24124702
 ```
 
