@@ -18,8 +18,8 @@ Focado na estratégia ágil e independente: **DOIs Oficiais do CERN via Zenodo**
 | **3** | **Euclid DE** | [`bruno-olivaes/oscillatory-dark-energy-euclid`](https://github.com/bruno-olivaes/oscillatory-dark-energy-euclid) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/oscillatory-dark-energy-euclid/manuscript/main.pdf) | [10.5281/zenodo.24121691](https://doi.org/10.5281/zenodo.24121691) | [Publicado](https://www.academia.edu/180670266) | 523.1 |
 | **4** | **Qiskit ZNE** | [`bruno-olivaes/qiskit-lombscargle-zne`](https://github.com/bruno-olivaes/qiskit-lombscargle-zne) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/qiskit-lombscargle-zne/manuscript/main.pdf) | [10.5281/zenodo.24121693](https://doi.org/10.5281/zenodo.24121693) | [Publicado](https://www.academia.edu/180671536) | 006.3 / 530.1 |
 | **5** | **PQC Wire** | [`bruno-olivaes/pqc-crypto-agility-benchmark`](https://github.com/bruno-olivaes/pqc-crypto-agility-benchmark) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/pqc-crypto-agility-benchmark/manuscript/main.pdf) | [10.5281/zenodo.24121695](https://doi.org/10.5281/zenodo.24121695) | [Publicado](https://www.academia.edu/180672168) | 005.8 / 006.3 |
-| **6** | **LHC DSI** | [`bruno-olivaes/lhc-dsi-search`](https://github.com/bruno-olivaes/lhc-dsi-search) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/lhc-dsi-search/manuscript/main.pdf) | *Sincronizando Zenodo* | Pronto para upload | 539.7 / 006.3 |
-| **7** | **NSBI LHC** | [`bruno-olivaes/lhc-nsbi-dsi`](https://github.com/bruno-olivaes/lhc-nsbi-dsi) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/lhc-nsbi-dsi/manuscript/main.pdf) | *Sincronizando Zenodo* | Pronto para upload | 006.3 / 539.7 |
+| **6** | **LHC DSI** | [`bruno-olivaes/lhc-dsi-search`](https://github.com/bruno-olivaes/lhc-dsi-search) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/lhc-dsi-search/manuscript/main.pdf) | [10.5281/zenodo.24149840](https://doi.org/10.5281/zenodo.24149840) | Pronto para upload | 539.7 / 006.3 |
+| **7** | **NSBI LHC** | [`bruno-olivaes/lhc-nsbi-dsi`](https://github.com/bruno-olivaes/lhc-nsbi-dsi) | [`manuscript/main.pdf`](file:///C:/Users/bruno/projects/lhc-nsbi-dsi/manuscript/main.pdf) | [10.5281/zenodo.24149842](https://doi.org/10.5281/zenodo.24149842) | Pronto para upload | 006.3 / 539.7 |
 | **M** | **Monografia Master** | [`bruno-olivaes/from-dsi-to-pqc`](https://github.com/bruno-olivaes) | [`The_Matrioska_Protocol_Book.pdf`](file:///C:/Users/bruno/Desktop/Publicacao_Artigos_Academia/The_Matrioska_Protocol_Book.pdf) | [10.5281/zenodo.24124702](https://doi.org/10.5281/zenodo.24124702) | [Publicado](https://www.academia.edu/) | 500 $\to$ 530.1 |
 
 ---
@@ -32,8 +32,8 @@ Focado na estratégia ágil e independente: **DOIs Oficiais do CERN via Zenodo**
 4. **`qiskit-lombscargle-zne` (Qiskit ZNE Benchmark v2.0.0):** [10.5281/zenodo.24121693](https://doi.org/10.5281/zenodo.24121693)
 5. **`pqc-crypto-agility-benchmark` (PQC Network Wire v1.0.0):** [10.5281/zenodo.24121695](https://doi.org/10.5281/zenodo.24121695)
 6. **`from-dsi-to-pqc` (Monografia Master / The Matrioska Protocol):** [10.5281/zenodo.24124702](https://doi.org/10.5281/zenodo.24124702)
-7. **`lhc-dsi-search` (LHC DSI Constraints v1.0.0):** *Webhook do Zenodo ativo no GitHub*
-8. **`lhc-nsbi-dsi` (NSBI for DSI at LHC v1.0.0):** *Webhook do Zenodo ativo no GitHub*
+7. **`lhc-dsi-search` (LHC DSI Constraints v1.0.1):** [10.5281/zenodo.24149840](https://doi.org/10.5281/zenodo.24149840)
+8. **`lhc-nsbi-dsi` (NSBI for DSI at LHC v1.0.1):** [10.5281/zenodo.24149842](https://doi.org/10.5281/zenodo.24149842)
 
 ---
 
@@ -65,10 +65,10 @@ Consulte o kit completo de cartas em [`JOURNAL_SUBMISSION_KIT.md`](JOURNAL_SUBMI
 
 | Janela / Fase | Artigo Alvo | Revista / Periódico Internacional | Foco Editorial da Carta | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| **Semana 1** | **Paper 1 (Planck DSI)** | *Monthly Notices of the Royal Astronomical Society (MNRAS)* | Pré-registro OSF, limites superiores rigorosos ($\varepsilon < 0.05$) e bootstrap sem *look-elsewhere effect*. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
+| **Semana 1** | **Paper 1 (Planck DSI)** | *Monthly Notices of the Royal Astronomical Society (MNRAS)* | Protocolo pré-registrado versionado no Git (tag `v2.1.2`), limites superiores rigorosos ($\varepsilon < 0.05$) e bootstrap sem *look-elsewhere effect*. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
 | **Semana 1** | **Paper 2 (Casimir AFM)** | *Review of Scientific Instruments (RSI)* | Eliminação de artefatos de Runge e splines em metrologia de forças sub-mícron em AFM/KPFM. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
-| **Semana 2** | **Paper 4 (Qiskit ZNE)** | *Quantum Science and Technology (QST)* | Benchmark empírico em hardware IBM: onde o ZNE harmônico falha e superioridade de Pauli Twirling em 4 qubits. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
-| **Semana 2** | **Paper 7 (NSBI LHC)** | *Physical Review D (PRD)* | Ganho de $9,5\times$ em sensibilidade com NSBI não-binada e eliminação de falsos positivos com $\Delta\text{BIC} = -23.2$. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
+| **Semana 2** | **Paper 4 (Qiskit ZNE)** | *Quantum Science and Technology (QST)* | Benchmark empírico via emulação Qiskit 2.x (`AerSimulator`): onde o ZNE harmônico falha e superioridade de Pauli Twirling em 4 qubits. | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
+| **Semana 2** | **Paper 7 (NSBI LHC)** | *Physical Review D (PRD)* | Ganho empírico de até $29,1\times$ em sensibilidade ($\varepsilon_{95} = 0.0337$ vs. $0.9800$ com 20 bins; NSBI neural $\varepsilon_{95} = 0.0324$) via Likelihood Contínua de Quadratura de Gauss-Legendre + NSBI ($R=0.99125$) e eliminação de falsos positivos ($\Delta\text{BIC} = -18.15$). | Pronto (`JOURNAL_SUBMISSION_KIT.md`) |
 | **Semana 3** | **Paper 3 (Euclid DE)** | *Astronomy & Astrophysics (A&A)* ou *JCAP* | Solução de Friedmann analítica e matriz de Fisher de quebra de degenerescência no ESA Euclid. | Planejado |
 | **Semana 3** | **Paper 5 (PQC Wire)** | *IEEE Transactions on Network and Service Management* ou *ACM CCS* | Benchmark de wire cost, fragmentação TCP e impacto do NIST FIPS 203 (ML-KEM-768) no TLS 1.3. | Planejado |
 | **Semana 4** | **Paper 6 (LHC DSI)** | *European Physical Journal C (EPJC)* | Certificação de 3 estágios em 62k colisões dimuon do CMS (CERN Open Data) e ausência de paridade cósmica. | Planejado |

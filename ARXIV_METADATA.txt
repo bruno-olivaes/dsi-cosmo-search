@@ -8,7 +8,7 @@ Authors:
 Bruno L. Olivaes
 
 Abstract:
-We present a pre-registered, radix-agnostic search for discrete scale invariance (DSI) in the Planck 2018 cosmic microwave background temperature power spectrum. DSI predicts a characteristic log-periodic modulation of primordial perturbations governed by the preferred scaling factor lambda, inducing oscillations in Fourier space with angular log-frequency omega = 2*pi/ln(lambda). Using a certified three-stage protocol (detection via generalized Lomb-Scargle periodogram, non-linear refinement, and multiplicity-corrected certification) subject to five mandatory integrity gates, we find no evidence for DSI in the Planck 2018 data. The most prominent candidate (lambda_hat = 4.12 +/- 0.31) yields an empirical post-trial significance of p_corrected = 0.975 via a non-parametric bootstrap-of-maximum null distribution, with an amplitude fully consistent with Gaussian cosmological sample variance. We establish rigorous 95% confidence level upper limits on the modulation amplitude epsilon < 0.05 across the comprehensive scaling range lambda in [1.1, 148]. Furthermore, we replicate our protocol on synthetic Large-Scale Structure mocks matching the Dark Energy Spectroscopic Instrument (DESI) survey precision, confirming identical null-detection behavior.
+We present a Git-versioned pre-registered (tag v2.1.2), radix-agnostic search for discrete scale invariance (DSI) in the Planck 2018 cosmic microwave background temperature power spectrum. DSI predicts a characteristic log-periodic modulation of primordial perturbations governed by the preferred scaling factor lambda, inducing oscillations in Fourier space with angular log-frequency omega = 2*pi/ln(lambda). Using a certified three-stage protocol (detection via generalized Lomb-Scargle periodogram, non-linear refinement, and multiplicity-corrected certification) subject to five mandatory integrity gates applied to residuals relative to the official Planck BestFit LambdaCDM baseline (N = 83 binned multipoles), we find no evidence for DSI in the Planck 2018 data. The most prominent residual candidate (lambda_hat = 1.2938 +/- 0.0072, omega_hat = 24.3918 +/- 0.5280) yields an empirical post-trial significance of p_corrected = 0.998 via a non-parametric bootstrap-of-maximum null distribution and Delta BIC = -49.80, with an amplitude fully consistent with Gaussian cosmological sample variance. We establish rigorous 95% confidence level upper limits on the modulation amplitude epsilon < 0.05 across the comprehensive scaling range lambda in [1.1, 148]. Furthermore, we replicate our protocol on synthetic Large-Scale Structure mocks matching the Dark Energy Spectroscopic Instrument (DESI) survey precision, confirming identical null-detection behavior (p_corrected = 0.314, Delta BIC = +8.80).
 
 Primary Category:
 astro-ph.CO (Cosmology and Nongalactic Astrophysics)
@@ -23,5 +23,4 @@ Journal-ref:
 (Leave blank during initial arXiv submission)
 
 DOI:
-(Pending Zenodo webhook sync; update once enabled in Zenodo dashboard)
-
+10.5281/zenodo.24121677

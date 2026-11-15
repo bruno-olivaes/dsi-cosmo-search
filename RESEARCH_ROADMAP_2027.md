@@ -27,22 +27,22 @@ timeline
 - **Destaque:** Apresentação do resultado nulo pré-registrado com 5 portas de integridade metodológica e limite superior de $95\%$ CL em $\epsilon < 0.05$.
 
 ### 2. Julho de 2027: Paper 2 no Review of Scientific Instruments
-- **Título:** *Artifact-Resistant Spectral Analysis in Dynamic AFM Casimir Force Measurements*
+- **Título:** *Spectral Analysis of Systematic Residuals in Casimir Force Measurements: Lossless Vector Re-Audit, Statistical Pitfalls, and KPFM Patch-Potential Metrology*
 - **Periódico Alvo:** *Review of Scientific Instruments* (RSI, American Institute of Physics)
 - **Fator de Impacto:** $\sim 1.6$
-- **Destaque:** Demonstração dos efeitos espúrios de borda (Runge ringing) em dados de AFM de Casimir e isolamento de potenciais de contato via regularização spline penalizada.
+- **Destaque:** Re-auditoria vetorial sem perdas ($N=497$ / $N=288$, $\sigma_P = 0.313\text{ mPa}$), prova analítica de Taylor ($-4 C_4 \delta z_0 z^{-5}$) absorvida na base física $\{1, z^{-4}, z^{-5}\}$, eliminação de artefatos de Runge e validação KPFM ($P_{\mathrm{patch}} \propto d^{-2.29}$).
 
 ### 3. Agosto de 2027: Paper 3 no JCAP
-- **Título:** *Forecasting Log-Oscillatory Dark Energy with ESA Euclid: Breaking the Degeneracy*
+- **Título:** *Testing Log-Oscillatory Dark Energy with Pantheon+, DESI BAO, and Stage-IV Euclid Forecasts: Non-Linear Degeneracy and Fisher Matrix Limits*
 - **Periódico Alvo:** *Journal of Cosmology and Astroparticle Physics* (JCAP, IOP / SISSA)
 - **Fator de Impacto:** $\sim 6.4$
-- **Destaque:** Matriz de covariância completa do Pantheon+, combinação com DESI 2024 e Planck, e quebra de degenerescência a $>3\sigma$ em $z=3$ pela espectroscopia do telescópio espacial Euclid.
+- **Destaque:** Matriz de covariância completa do Pantheon+ ($1580 \times 1580$), combinação com DESI 2024 e Planck ($\Delta\mathrm{BIC} = +18.22$) e matriz de Fisher Stage-IV do ESA Euclid em 7 bins ($\max|\Delta H/H| = 0.103\%$, $0.18\sigma$, alcance $3\sigma$ de $A_{3\sigma} \approx 0.15\text{--}0.29$ com prior $\sigma_{\Omega_m}=0.007$).
 
 ### 4. Setembro de 2027: Paper 4 no Quantum Science and Technology
 - **Título:** *When Harmonic ZNE Fails: A Comparative Benchmark of Error Mitigation on NISQ Devices*
 - **Periódico Alvo:** *Quantum Science and Technology* (QST, IOP Publishing)
 - **Fator de Impacto:** $\sim 6.7$
-- **Destaque:** Benchmark pré-registrado provando a superioridade do Clifford Pauli Twirling ($81\%$ de mitigação) sobre modelos harmônicos em circuitos multi-qubit acoplados.
+- **Destaque:** Benchmark pré-registrado via emulação de alta fidelidade Qiskit 2.x (`AerSimulator`) provando a superioridade do Clifford Pauli Twirling ($80.8\%\text{--}81.0\%$ de mitigação) sobre modelos harmônicos em circuitos 4-qubit acoplados.
 
 ### 5. Outubro de 2027: Paper 5 no IEEE Communications Letters
 - **Título:** *The Network Cost of Post-Quantum Cryptography: TCP Fragmentation in TLS 1.3 Handshakes*
